@@ -38,7 +38,6 @@ tiers:
       - "bi analyst"
       - "bi developer"
       - "bi manager"
-      - "analytics engineer"
       - "tableau"
 
 # Drop the job if any of these appear in the title (takes precedence over includes).
@@ -54,7 +53,7 @@ exclude:
   - "sdr"
   - "bdr"
   - "account executive"
-  - "engineering"
+  - "engineer"
 
 # Seniority is detected for tagging. drop_below optionally filters RevOps/Sales Ops
 # tiers (1-2) below a level. Default off ("") - better to see an extra than miss one.
