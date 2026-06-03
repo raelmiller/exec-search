@@ -1,12 +1,12 @@
-# Companies to monitor, generated from the Phase 1 target list (tier A first).
+# Companies to monitor - scored target list (tier A first).
 companies:
+- name: Lighthouse
+  tier: A
 - name: Checkout.com
   tier: A
-- name: ClickHouse
+- name: Snyk
   tier: A
-- name: Cohere
-  tier: A
-- name: Databricks
+- name: Pleo
   tier: A
 - name: Deel
   tier: A
@@ -14,189 +14,563 @@ companies:
   tier: A
 - name: GoCardless
   tier: A
-- name: Gong
-  tier: A
 - name: HiBob
-  tier: A
-- name: Lighthouse
-  tier: A
-- name: Matillion
   tier: A
 - name: Personio
   tier: A
-- name: Pleo
+- name: Remote
   tier: A
 - name: Quantexa
   tier: A
-- name: Remote
-  tier: A
-- name: Rippling
-  tier: A
-- name: Snyk
+- name: Matillion
   tier: A
 - name: Synthesia
   tier: A
-- name: Aircall
-  tier: B
-- name: Airwallex
-  tier: B
-- name: Aiven
-  tier: B
-- name: Algolia
-  tier: B
-- name: Allica Bank
-  tier: B
-- name: Amplitude
-  tier: B
-- name: Atlan
-  tier: B
-- name: Beamery
-  tier: B
-- name: Braze
-  tier: B
-- name: Celonis
-  tier: B
-- name: ClearBank
-  tier: B
-- name: Cleo
-  tier: B
-- name: Cognite
-  tier: B
-- name: Confluent
-  tier: B
-- name: Consensus
-  tier: B
-- name: Contentful
-  tier: B
-- name: Contentsquare
-  tier: B
-- name: Curve
-  tier: B
-- name: Datadog
-  tier: B
-- name: Dataiku
-  tier: B
-- name: dbt Labs
-  tier: B
+- name: Cohere
+  tier: A
+- name: Gong
+  tier: A
+- name: Databricks
+  tier: A
+- name: Rippling
+  tier: A
+- name: ClickHouse
+  tier: A
+- name: Clari
+  tier: A
+- name: Apollo.io
+  tier: A
+- name: Cognism
+  tier: A
+- name: 6sense
+  tier: A
+- name: Volt
+  tier: A
+- name: Vanta
+  tier: A
+- name: Immersive Labs
+  tier: A
+- name: Grafana Labs
+  tier: A
+- name: Vercel
+  tier: A
+- name: monday.com
+  tier: A
+- name: TravelPerk
+  tier: A
+- name: Hugging Face
+  tier: A
+- name: Mistral AI
+  tier: A
+- name: Scale AI
+  tier: A
+- name: Glean
+  tier: A
+- name: Harvey
+  tier: A
+- name: Zip
+  tier: A
+- name: PolyAI
+  tier: A
+- name: Hyperexponential
+  tier: A
+- name: Codat
+  tier: A
 - name: Eightfold AI
-  tier: B
-- name: ElevenLabs
-  tier: B
-- name: Faculty
-  tier: B
-- name: Fivetran
-  tier: B
-- name: Flagstone
-  tier: B
-- name: Form3
-  tier: B
-- name: GitLab
-  tier: B
-- name: HubSpot
-  tier: B
-- name: Intercom
-  tier: B
-- name: Iterable
-  tier: B
-- name: Klaviyo
-  tier: B
-- name: Luminance
-  tier: B
-- name: Marshmallow
-  tier: B
-- name: Mews
-  tier: B
-- name: Mirakl
-  tier: B
-- name: Miro
-  tier: B
-- name: Mixpanel
-  tier: B
-- name: Modulr
-  tier: B
-- name: MongoDB
-  tier: B
-- name: Monzo
-  tier: B
-- name: Multiverse
-  tier: B
-- name: Nebius
-  tier: B
-- name: Notion
-  tier: B
-- name: OakNorth
   tier: B
 - name: Optimizely
   tier: B
+- name: Mixpanel
+  tier: B
+- name: Nebius
+  tier: B
+- name: Webflow
+  tier: B
+- name: Consensus
+  tier: B
+- name: Ripple
+  tier: B
+- name: Tide
+  tier: B
+- name: Form3
+  tier: B
+- name: Thought Machine
+  tier: B
+- name: Modulr
+  tier: B
+- name: TrueLayer
+  tier: B
+- name: Zilch
+  tier: B
+- name: ClearBank
+  tier: B
+- name: Flagstone
+  tier: B
+- name: Curve
+  tier: B
+- name: Multiverse
+  tier: B
+- name: Beamery
+  tier: B
+- name: ElevenLabs
+  tier: B
+- name: Aiven
+  tier: B
+- name: Cleo
+  tier: B
+- name: Robin AI
+  tier: B
+- name: Luminance
+  tier: B
+- name: Sylvera
+  tier: B
+- name: Mews
+  tier: B
+- name: SiteMinder
+  tier: B
+- name: Trustpilot
+  tier: B
 - name: Paddle
+  tier: B
+- name: Contentsquare
+  tier: B
+- name: Marshmallow
+  tier: B
+- name: Zego
+  tier: B
+- name: YuLife
+  tier: B
+- name: HubSpot
+  tier: B
+- name: Datadog
+  tier: B
+- name: MongoDB
+  tier: B
+- name: Confluent
+  tier: B
+- name: GitLab
+  tier: B
+- name: Braze
+  tier: B
+- name: Klaviyo
+  tier: B
+- name: Amplitude
+  tier: B
+- name: Miro
+  tier: B
+- name: Notion
+  tier: B
+- name: Celonis
+  tier: B
+- name: Algolia
+  tier: B
+- name: Contentful
+  tier: B
+- name: Dataiku
+  tier: B
+- name: Aircall
+  tier: B
+- name: Intercom
+  tier: B
+- name: Pendo
+  tier: B
+- name: Iterable
+  tier: B
+- name: Fivetran
+  tier: B
+- name: dbt Labs
+  tier: B
+- name: Sigma Computing
+  tier: B
+- name: Atlan
+  tier: B
+- name: Cognite
+  tier: B
+- name: Faculty
+  tier: B
+- name: Spendesk
   tier: B
 - name: Payhawk
   tier: B
-- name: Pendo
+- name: Qonto
   tier: B
 - name: Pennylane
   tier: B
 - name: Pigment
   tier: B
-- name: Qonto
+- name: Mirakl
   tier: B
-- name: Revolut
+- name: Airwallex
   tier: B
-- name: Ripple
-  tier: B
-- name: Robin AI
-  tier: B
-- name: Sigma Computing
-  tier: B
-- name: SiteMinder
-  tier: B
-- name: Spendesk
+- name: Monzo
   tier: B
 - name: Starling Bank
   tier: B
-- name: Sylvera
+- name: Revolut
   tier: B
-- name: Thought Machine
+- name: OakNorth
   tier: B
-- name: Tide
+- name: Allica Bank
   tier: B
-- name: TrueLayer
+- name: Salesloft
   tier: B
-- name: Trustpilot
+- name: Outreach
   tier: B
-- name: Webflow
+- name: Highspot
   tier: B
-- name: YuLife
+- name: Seismic
   tier: B
-- name: Zego
+- name: Demandbase
   tier: B
-- name: Zilch
+- name: SumUp
   tier: B
-- name: Airtable
+- name: Primer
+  tier: B
+- name: Yapily
+  tier: B
+- name: Griffin
+  tier: B
+- name: iwoca
+  tier: B
+- name: Soldo
+  tier: B
+- name: Salary Finance
+  tier: B
+- name: Zopa
+  tier: B
+- name: Plaid
+  tier: B
+- name: Stripe
+  tier: B
+- name: Klarna
+  tier: B
+- name: Lendable
+  tier: B
+- name: Brex
+  tier: B
+- name: Tipalti
+  tier: B
+- name: Moneybox
+  tier: B
+- name: Culture Amp
+  tier: B
+- name: Lattice
+  tier: B
+- name: Leapsome
+  tier: B
+- name: Factorial
+  tier: B
+- name: Gem
+  tier: B
+- name: Phenom People
+  tier: B
+- name: CoachHub
+  tier: B
+- name: Drata
+  tier: B
+- name: SentinelOne
+  tier: B
+- name: CrowdStrike
+  tier: B
+- name: Orca Security
+  tier: B
+- name: Harness
+  tier: B
+- name: JFrog
+  tier: B
+- name: SonarSource
+  tier: B
+- name: CyberArk
+  tier: B
+- name: Dynatrace
+  tier: B
+- name: Sentry
+  tier: B
+- name: CockroachDB
+  tier: B
+- name: Weaviate
+  tier: B
+- name: SingleStore
+  tier: B
+- name: Starburst
+  tier: B
+- name: Pinecone
+  tier: B
+- name: Airbyte
+  tier: B
+- name: Astronomer
+  tier: B
+- name: Census
+  tier: B
+- name: Hightouch
+  tier: B
+- name: Pipedrive
+  tier: B
+- name: Chargebee
+  tier: B
+- name: ActiveCampaign
+  tier: B
+- name: Bloomreach
+  tier: B
+- name: Salsify
+  tier: B
+- name: Akeneo
+  tier: B
+- name: Gorgias
+  tier: B
+- name: Ometria
+  tier: B
+- name: Typeform
+  tier: B
+- name: Front
+  tier: B
+- name: Talkdesk
+  tier: B
+- name: Postman
+  tier: B
+- name: FullStory
+  tier: B
+- name: ThoughtSpot
+  tier: B
+- name: ClickUp
+  tier: B
+- name: VTEX
+  tier: B
+- name: Commercetools
+  tier: B
+- name: Contentstack
+  tier: B
+- name: Navan
+  tier: B
+- name: project44
+  tier: B
+- name: Beacon
+  tier: B
+- name: Zencargo
+  tier: B
+- name: Accurx
+  tier: B
+- name: Feedzai
+  tier: B
+- name: Featurespace
+  tier: B
+- name: Watershed
+  tier: B
+- name: BeZero Carbon
+  tier: B
+- name: Ironclad
+  tier: B
+- name: Juro
+  tier: B
+- name: Clio
+  tier: B
+- name: Writer
+  tier: B
+- name: Ivalua
+  tier: B
+- name: Workato
+  tier: B
+- name: n8n
+  tier: B
+- name: Plentific
+  tier: B
+- name: Goodlord
+  tier: B
+- name: Infobip
+  tier: B
+- name: Tractable
+  tier: B
+- name: Greenhouse
+  tier: B
+- name: SmartRecruiters
+  tier: B
+- name: Docebo
+  tier: B
+- name: Brandwatch
+  tier: B
+- name: Zenoti
+  tier: B
+- name: Fresha
+  tier: B
+- name: Chainalysis
+  tier: B
+- name: Elliptic
+  tier: B
+- name: Nexthink
+  tier: B
+- name: Medius
+  tier: B
+- name: Tradeshift
+  tier: B
+- name: Bombora
+  tier: B
+- name: Zscaler
+  tier: B
+- name: Arctic Wolf
+  tier: B
+- name: Marqeta
   tier: C
-- name: Cloudsmith
-  tier: C
-- name: Darktrace
-  tier: C
-- name: Diligent
+- name: Xero
   tier: C
 - name: Genesys
   tier: C
-- name: Hex
-  tier: C
-- name: Marqeta
+- name: Spotify
   tier: C
 - name: Omniplex Learning
   tier: C
-- name: Permutive
-  tier: C
-- name: Spotify
-  tier: C
-- name: Twilio
-  tier: C
-- name: Wagestream
+- name: Diligent
   tier: C
 - name: Wise
   tier: C
-- name: Xero
+- name: Permutive
+  tier: C
+- name: Wagestream
+  tier: C
+- name: Darktrace
+  tier: C
+- name: Cloudsmith
+  tier: C
+- name: Twilio
+  tier: C
+- name: Airtable
+  tier: C
+- name: Hex
+  tier: C
+- name: ZoomInfo
+  tier: C
+- name: Atom Bank
+  tier: C
+- name: Adyen
+  tier: C
+- name: Trading 212
+  tier: C
+- name: Teamtailor
+  tier: C
+- name: Go1
+  tier: C
+- name: Unmind
+  tier: C
+- name: Thrive Learning
+  tier: C
+- name: Cornerstone OnDemand
+  tier: C
+- name: Freshworks
+  tier: C
+- name: Zendesk
+  tier: C
+- name: Zuora
+  tier: C
+- name: Dotdigital
+  tier: C
+- name: Gainsight
+  tier: C
+- name: Planhat
+  tier: C
+- name: Medallia
+  tier: C
+- name: Dixa
+  tier: C
+- name: PagerDuty
+  tier: C
+- name: Elastic
+  tier: C
+- name: New Relic
+  tier: C
+- name: Qlik
+  tier: C
+- name: Sisense
+  tier: C
+- name: Asana
+  tier: C
+- name: Coda
+  tier: C
+- name: Lightspeed
+  tier: C
+- name: Procore
+  tier: C
+- name: Bizzabo
+  tier: C
+- name: ON24
+  tier: C
+- name: Sennder
+  tier: C
+- name: Shippeo
+  tier: C
+- name: Kry / Livi
+  tier: C
+- name: Doctify
+  tier: C
+- name: Greenly
+  tier: C
+- name: Normative
+  tier: C
+- name: Persefoni
+  tier: C
+- name: PandaDoc
+  tier: C
+- name: Conga
+  tier: C
+- name: Coupa
+  tier: C
+- name: Maxio
+  tier: C
+- name: Lokalise
+  tier: C
+- name: Sinch
+  tier: C
+- name: Workable
+  tier: C
+- name: Filtered
+  tier: C
+- name: Learnerbly
+  tier: C
+- name: Meltwater
+  tier: C
+- name: DocuSign
+  tier: C
+- name: Sitecore
+  tier: C
+- name: Qualtrics
+  tier: C
+- name: Box
+  tier: C
+- name: LogRocket
+  tier: C
+- name: PostHog
+  tier: C
+- name: Retool
+  tier: C
+- name: Boomi
+  tier: C
+- name: Sprout Social
+  tier: C
+- name: Hootsuite
+  tier: C
+- name: Sophos
+  tier: C
+- name: SailPoint
+  tier: C
+- name: Recurly
+  tier: C
+- name: Pipefy
+  tier: C
+- name: TrustRadius
+  tier: C
+- name: G2
+  tier: C
+- name: Patchwork Health
+  tier: C
+- name: SurveyMonkey / Momentive
+  tier: C
+- name: Expensify
+  tier: C
+- name: SAP Concur
+  tier: C
+- name: Habito
+  tier: C
+- name: Re-Leased
+  tier: C
+- name: Fixflo
+  tier: C
+- name: Castor
   tier: C
