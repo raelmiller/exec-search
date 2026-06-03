@@ -1,3 +1,7 @@
+# Role taxonomy and matching rules. Edit freely; matching is case-insensitive
+# substring on the job TITLE. Tiers are tried in priority order (1 first); a job
+# is tagged with the first tier it matches.
+
 tiers:
   - name: "RevOps"
     priority: 1
@@ -37,6 +41,7 @@ tiers:
       - "analytics engineer"
       - "tableau"
 
+# Drop the job if any of these appear in the title (takes precedence over includes).
 exclude:
   - "deal desk"
   - "deals desk"
@@ -49,13 +54,20 @@ exclude:
   - "sdr"
   - "bdr"
   - "account executive"
+  - "engineering"
 
+# Seniority is detected for tagging. drop_below optionally filters RevOps/Sales Ops
+# tiers (1-2) below a level. Default off ("") - better to see an extra than miss one.
+# Set to "manager" to hide sub-manager RevOps/Sales Ops roles. BI/Analytics is never gated.
 drop_below: ""
 seniority:
   director_plus: ["chief", " vp", "vice president", "head of", "director"]
   manager: ["manager", " lead", "principal", "staff"]
   ic: ["senior", "specialist", "analyst", "associate", "coordinator", "executive"]
 
+# A job passes location if its location text contains any include term. Jobs with
+# a blank location are kept and tagged "location unknown" (many remote roles are).
+# Location exclude terms take precedence over include terms.
 locations:
   include:
     - "london"
@@ -65,3 +77,20 @@ locations:
     - "remote"
     - "emea"
     - "europe"
+  exclude:
+    - "united states"
+    - ", us"
+    - "(us)"
+    - "usa"
+    - "new york"
+    - "san francisco"
+    - "california"
+    - "texas"
+    - "chicago"
+    - "boston"
+    - "seattle"
+    - "denver"
+    - "austin"
+    - "atlanta"
+    - "toronto"
+    - "canada"
