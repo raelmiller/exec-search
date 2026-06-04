@@ -1,576 +1,1849 @@
-# Companies to monitor - scored target list (tier A first).
 companies:
 - name: Lighthouse
   tier: A
+  sector: Hospitality data / SaaS
+  hq: London (HQ)
+  size: 700–1,000
+  stage: Late
+  co_notes: Hotel commercial intelligence; strong domain + data fit
 - name: Checkout.com
   tier: A
+  sector: Payments / Fintech
+  hq: London (HQ)
+  size: 1,000–1,800
+  stage: Pre-IPO
+  co_notes: Large GTM org, London HQ
 - name: Snyk
   tier: A
+  sector: DevSecOps
+  hq: London + Boston
+  size: 1,000–1,300
+  stage: Late
+  co_notes: Strong London GTM, data-rich
 - name: Pleo
   tier: A
+  sector: Spend management
+  hq: Copenhagen / London
+  size: 900–1,200
+  stage: Late
 - name: Deel
   tier: A
+  sector: HR / Payroll (EOR)
+  hq: Remote-first
+  size: 4,000–5,000
+  stage: Pre-IPO
+  co_notes: Huge sales org; remote-friendly
 - name: DeepL
   tier: A
+  sector: Translation AI
+  hq: Cologne / London
+  size: 700–1,000
+  stage: Late
 - name: GoCardless
   tier: A
+  sector: Open banking / Payments
+  hq: London (HQ)
+  size: 800–1,000
+  stage: Late
+  co_notes: London HQ, strong RevOps need
 - name: HiBob
   tier: A
+  sector: HR Tech (HRIS)
+  hq: Tel Aviv / London
+  size: 1,000–1,400
+  stage: Late
+  co_notes: Fast-growing HRIS; London office
 - name: Personio
   tier: A
+  sector: HR Tech (HRIS)
+  hq: Munich / London
+  size: 1,800–2,200
+  stage: Late
+  co_notes: European HR SaaS leader
 - name: Remote
   tier: A
+  sector: HR / EOR
+  hq: Remote-first
+  size: 1,500–2,000
+  stage: Late
+  co_notes: Fully distributed; RevOps critical
 - name: Quantexa
   tier: A
+  sector: Data / AI (financial crime)
+  hq: London (HQ)
+  size: 700–1,000
+  stage: Late
+  co_notes: London HQ; data-driven GTM
 - name: Matillion
   tier: A
+  sector: Data integration / ETL
+  hq: Manchester / New York
+  size: 500–700
+  stage: Late
+  co_notes: UK-headquartered data SaaS
 - name: Synthesia
   tier: A
+  sector: Video AI
+  hq: London (HQ)
+  size: 400–600
+  stage: Late
+  co_notes: London HQ, rapid GTM build-out
 - name: Cohere
   tier: A
+  sector: Enterprise AI / LLM
+  hq: Toronto / London
+  size: 500–800
+  stage: Late
+  co_notes: Enterprise AI; London presence
 - name: Gong
   tier: A
+  sector: Revenue intelligence
+  hq: San Francisco / London
+  size: 1,500–2,000
+  stage: Pre-IPO
+  co_notes: RevOps-native product; London GTM
 - name: Databricks
   tier: A
+  sector: Data & AI platform
+  hq: San Francisco / London
+  size: 6,000+
+  stage: Pre-IPO
+  co_notes: Massive GTM; London hub
 - name: Rippling
   tier: A
+  sector: HR / IT / Finance platform
+  hq: San Francisco / Dublin
+  size: 3,000–4,000
+  stage: Pre-IPO
+  co_notes: Aggressive EMEA expansion
 - name: ClickHouse
   tier: A
+  sector: OLAP / Data infra
+  hq: San Francisco / Amsterdam
+  size: 400–600
+  stage: Late
 - name: Clari
   tier: A
+  sector: Revenue operations platform
+  hq: Sunnyvale / London
+  size: 700–1,000
+  stage: Late
+  co_notes: RevOps product; London sales team
 - name: Apollo.io
   tier: A
+  sector: Sales intelligence
+  hq: San Francisco / remote
+  size: 1,000–1,500
+  stage: Late
+  co_notes: Sales-led; RevOps-heavy
 - name: Cognism
   tier: A
+  sector: Sales intelligence
+  hq: London (HQ)
+  size: 500–700
+  stage: Late
+  co_notes: London HQ; GTM-native
 - name: 6sense
   tier: A
+  sector: ABM / Revenue AI
+  hq: San Francisco / London
+  size: 1,500–2,000
+  stage: Pre-IPO
+  co_notes: RevOps-adjacent product
 - name: Volt
   tier: A
+  sector: Open banking / Payments
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ; scale-up phase
 - name: Vanta
   tier: A
+  sector: Trust & compliance
+  hq: San Francisco / London
+  size: 500–800
+  stage: Late
+  co_notes: Fast-growing; London expansion
 - name: Immersive Labs
   tier: A
+  sector: Cyber skills
+  hq: Bristol / London
+  size: 400–600
+  stage: Late
+  co_notes: UK HQ; strong GTM team
 - name: Grafana Labs
   tier: A
+  sector: Observability / Open source
+  hq: Remote-first / New York
+  size: 1,000–1,500
+  stage: Late
+  co_notes: Remote-first; fast growing
 - name: Vercel
   tier: A
+  sector: Frontend cloud
+  hq: San Francisco / remote
+  size: 500–800
+  stage: Late
 - name: monday.com
   tier: A
+  sector: Work OS / SaaS
+  hq: Tel Aviv / London
+  size: 1,800–2,200
+  stage: Public
+  co_notes: London office; strong RevOps
 - name: TravelPerk
   tier: A
+  sector: Business travel
+  hq: Barcelona / London
+  size: 1,200–1,600
+  stage: Late
+  co_notes: London hub; rapid GTM scaling
 - name: Hugging Face
   tier: A
+  sector: AI / ML platform
+  hq: New York / Paris
+  size: 400–600
+  stage: Late
 - name: Mistral AI
   tier: A
+  sector: LLM / AI
+  hq: Paris
+  size: 200–400
+  stage: Growth
+  co_notes: European AI leader; Paris HQ
 - name: Scale AI
   tier: A
+  sector: AI data
+  hq: San Francisco
+  size: 1,000–1,500
+  stage: Late
 - name: Glean
   tier: A
+  sector: Enterprise search / AI
+  hq: Palo Alto / London
+  size: 500–800
+  stage: Late
+  co_notes: London expansion underway
 - name: Harvey
   tier: A
+  sector: Legal AI
+  hq: San Francisco / London
+  size: 200–400
+  stage: Growth
+  co_notes: London office; scaling GTM
 - name: Zip
   tier: A
+  sector: Procurement orchestration
+  hq: San Francisco
+  size: 300–500
+  stage: Late
 - name: PolyAI
   tier: A
+  sector: Conversational AI
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ; fast-growing
 - name: Hyperexponential
   tier: A
+  sector: Insurance pricing SaaS
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ; niche but strong GTM
 - name: Codat
   tier: A
+  sector: Financial data API
+  hq: London (HQ)
+  size: 200–350
+  stage: Growth
+  co_notes: London HQ; fintech data infra
 - name: Eightfold AI
   tier: B
+  sector: Talent intelligence / AI
+  hq: California / London
+  size: 1,000–1,500
+  stage: Late
 - name: Optimizely
   tier: B
+  sector: DXP / Experimentation
+  hq: New York / Nottingham
+  size: 1,200–1,500
+  stage: Late (PE)
 - name: Mixpanel
   tier: B
+  sector: Product analytics
+  hq: San Francisco / London
+  size: 400–600
+  stage: Late
+  co_notes: Analytics-native
 - name: Nebius
   tier: B
-- name: Webflow
-  tier: B
-- name: Consensus
-  tier: B
-- name: Ripple
-  tier: B
-- name: Tide
-  tier: B
-- name: Form3
-  tier: B
-- name: Thought Machine
-  tier: B
-- name: Modulr
-  tier: B
-- name: TrueLayer
-  tier: B
-- name: Zilch
-  tier: B
-- name: ClearBank
-  tier: B
-- name: Flagstone
-  tier: B
-- name: Curve
-  tier: B
-- name: Multiverse
-  tier: B
-- name: Beamery
-  tier: B
-- name: ElevenLabs
-  tier: B
-- name: Aiven
-  tier: B
-- name: Cleo
-  tier: B
-- name: Robin AI
-  tier: B
-- name: Luminance
-  tier: B
-- name: Sylvera
-  tier: B
-- name: Mews
-  tier: B
-- name: SiteMinder
-  tier: B
-- name: Trustpilot
-  tier: B
-- name: Paddle
-  tier: B
-- name: Contentsquare
-  tier: B
-- name: Marshmallow
-  tier: B
-- name: Zego
-  tier: B
-- name: YuLife
-  tier: B
-- name: HubSpot
-  tier: B
-- name: Datadog
-  tier: B
-- name: MongoDB
-  tier: B
-- name: Confluent
-  tier: B
-- name: GitLab
-  tier: B
-- name: Braze
-  tier: B
-- name: Klaviyo
-  tier: B
-- name: Amplitude
-  tier: B
-- name: Miro
-  tier: B
-- name: Notion
-  tier: B
-- name: Celonis
-  tier: B
-- name: Algolia
-  tier: B
-- name: Contentful
-  tier: B
-- name: Dataiku
-  tier: B
-- name: Aircall
-  tier: B
-- name: Intercom
-  tier: B
-- name: Pendo
-  tier: B
-- name: Iterable
-  tier: B
-- name: Fivetran
-  tier: B
-- name: dbt Labs
-  tier: B
-- name: Sigma Computing
-  tier: B
-- name: Atlan
-  tier: B
-- name: Cognite
-  tier: B
-- name: Faculty
-  tier: B
-- name: Spendesk
-  tier: B
-- name: Payhawk
-  tier: B
-- name: Qonto
-  tier: B
-- name: Pennylane
-  tier: B
-- name: Pigment
-  tier: B
-- name: Mirakl
-  tier: B
-- name: Airwallex
-  tier: B
-- name: Monzo
-  tier: B
-- name: Starling Bank
-  tier: B
-- name: Revolut
-  tier: B
-- name: OakNorth
-  tier: B
-- name: Allica Bank
-  tier: B
-- name: Salesloft
-  tier: B
-- name: Outreach
-  tier: B
-- name: Highspot
-  tier: B
-- name: Seismic
-  tier: B
-- name: Demandbase
-  tier: B
-- name: SumUp
-  tier: B
-- name: Primer
-  tier: B
-- name: Yapily
-  tier: B
-- name: Griffin
-  tier: B
-- name: iwoca
-  tier: B
-- name: Soldo
-  tier: B
-- name: Salary Finance
-  tier: B
-- name: Zopa
-  tier: B
-- name: Plaid
-  tier: B
-- name: Stripe
-  tier: B
-- name: Klarna
-  tier: B
-- name: Lendable
-  tier: B
-- name: Brex
-  tier: B
-- name: Tipalti
-  tier: B
-- name: Moneybox
-  tier: B
-- name: Culture Amp
-  tier: B
-- name: Lattice
-  tier: B
-- name: Leapsome
-  tier: B
-- name: Factorial
-  tier: B
-- name: Gem
-  tier: B
-- name: Phenom People
-  tier: B
-- name: CoachHub
-  tier: B
-- name: Drata
-  tier: B
-- name: SentinelOne
-  tier: B
-- name: CrowdStrike
-  tier: B
-- name: Orca Security
-  tier: B
-- name: Harness
-  tier: B
-- name: JFrog
-  tier: B
-- name: SonarSource
-  tier: B
-- name: CyberArk
-  tier: B
-- name: Dynatrace
-  tier: B
-- name: Sentry
-  tier: B
-- name: CockroachDB
-  tier: B
-- name: Weaviate
-  tier: B
-- name: SingleStore
-  tier: B
-- name: Starburst
-  tier: B
-- name: Pinecone
-  tier: B
-- name: Airbyte
-  tier: B
-- name: Astronomer
-  tier: B
-- name: Census
-  tier: B
-- name: Hightouch
-  tier: B
-- name: Pipedrive
-  tier: B
-- name: Chargebee
-  tier: B
-- name: ActiveCampaign
-  tier: B
-- name: Bloomreach
-  tier: B
-- name: Salsify
-  tier: B
-- name: Akeneo
-  tier: B
-- name: Gorgias
-  tier: B
-- name: Ometria
-  tier: B
-- name: Typeform
-  tier: B
-- name: Front
-  tier: B
-- name: Talkdesk
-  tier: B
-- name: Postman
-  tier: B
-- name: FullStory
-  tier: B
-- name: ThoughtSpot
-  tier: B
-- name: ClickUp
-  tier: B
-- name: VTEX
-  tier: B
-- name: Commercetools
-  tier: B
-- name: Contentstack
-  tier: B
-- name: Navan
-  tier: B
-- name: project44
-  tier: B
-- name: Beacon
-  tier: B
-- name: Zencargo
-  tier: B
-- name: Accurx
-  tier: B
-- name: Feedzai
-  tier: B
-- name: Featurespace
-  tier: B
-- name: Watershed
-  tier: B
-- name: BeZero Carbon
-  tier: B
-- name: Ironclad
-  tier: B
-- name: Juro
-  tier: B
-- name: Clio
-  tier: B
-- name: Writer
-  tier: B
-- name: Ivalua
-  tier: B
-- name: Workato
-  tier: B
-- name: n8n
-  tier: B
-- name: Plentific
-  tier: B
-- name: Goodlord
-  tier: B
-- name: Infobip
-  tier: B
-- name: Tractable
-  tier: B
-- name: Greenhouse
-  tier: B
-- name: SmartRecruiters
-  tier: B
-- name: Docebo
-  tier: B
-- name: Brandwatch
-  tier: B
-- name: Zenoti
-  tier: B
-- name: Fresha
-  tier: B
-- name: Chainalysis
-  tier: B
-- name: Elliptic
-  tier: B
-- name: Nexthink
-  tier: B
-- name: Medius
-  tier: B
-- name: Tradeshift
-  tier: B
-- name: Bombora
-  tier: B
-- name: Zscaler
-  tier: B
-- name: Arctic Wolf
-  tier: B
+  sector: AI cloud infrastructure
+  hq: Amsterdam / London
+  size: 1,000–2,000
+  stage: Growth (public)
 - name: Marqeta
   tier: C
+  sector: Card issuing / Fintech
+  hq: Oakland / London
+  size: 800–1,000
+  stage: Public
+- name: Webflow
+  tier: B
+  sector: No-code web
+  hq: San Francisco
+  size: 1,000–1,300
+  stage: Late
+  co_notes: Mostly US-based
 - name: Xero
   tier: C
+  sector: Accounting SaaS
+  hq: New Zealand / London
+  size: 4,000–5,000
+  stage: Public
 - name: Genesys
   tier: C
+  sector: CX / Contact centre
+  hq: California / London
+  size: 6,000+
+  stage: Public
+  co_notes: Very large / mature
 - name: Spotify
   tier: C
-- name: Omniplex Learning
+  sector: Audio / Media
+  hq: Stockholm / London
+  size: 9,000+
+  stage: Public
+- name: Okta
   tier: C
-- name: Diligent
-  tier: C
-- name: Wise
-  tier: C
-- name: Permutive
-  tier: C
-- name: Wagestream
-  tier: C
-- name: Darktrace
-  tier: C
-- name: Cloudsmith
-  tier: C
-- name: Twilio
-  tier: C
-- name: Airtable
-  tier: C
-- name: Hex
-  tier: C
-- name: ZoomInfo
-  tier: C
-- name: Atom Bank
-  tier: C
-- name: Adyen
-  tier: C
-- name: Trading 212
-  tier: C
-- name: Teamtailor
-  tier: C
-- name: Go1
-  tier: C
-- name: Unmind
-  tier: C
-- name: Thrive Learning
-  tier: C
-- name: Cornerstone OnDemand
-  tier: C
-- name: Freshworks
-  tier: C
+  sector: Identity / Security
+  hq: San Francisco / London
+  size: 6,000+
+  stage: Public
 - name: Zendesk
   tier: C
-- name: Zuora
-  tier: C
-- name: Dotdigital
-  tier: C
-- name: Gainsight
-  tier: C
-- name: Planhat
-  tier: C
+  sector: CX / Support
+  hq: San Francisco / London
+  size: 6,000+
+  stage: Private (PE)
+- name: Braze
+  tier: B
+  sector: Customer engagement
+  hq: New York / London
+  size: 1,500–2,000
+  stage: Public
+  co_notes: London office; marketing-led GTM
+- name: Amplitude
+  tier: B
+  sector: Product analytics
+  hq: San Francisco / London
+  size: 700–1,000
+  stage: Public
+- name: Heap
+  tier: B
+  sector: Product analytics
+  hq: San Francisco
+  size: 300–500
+  stage: Late
+- name: Pendo
+  tier: B
+  sector: Product analytics
+  hq: Raleigh / London
+  size: 700–1,000
+  stage: Late
+- name: Contentsquare
+  tier: B
+  sector: Digital experience analytics
+  hq: Paris / London
+  size: 1,500–2,000
+  stage: Late
+  co_notes: Paris HQ; London hub
 - name: Medallia
   tier: C
-- name: Dixa
-  tier: C
-- name: PagerDuty
-  tier: C
-- name: Elastic
-  tier: C
-- name: New Relic
-  tier: C
-- name: Qlik
-  tier: C
-- name: Sisense
-  tier: C
-- name: Asana
-  tier: C
-- name: Coda
-  tier: C
-- name: Lightspeed
-  tier: C
-- name: Procore
-  tier: C
-- name: Bizzabo
-  tier: C
-- name: ON24
-  tier: C
-- name: Sennder
-  tier: C
-- name: Shippeo
-  tier: C
-- name: Kry / Livi
-  tier: C
-- name: Doctify
-  tier: C
-- name: Greenly
-  tier: C
-- name: Normative
-  tier: C
-- name: Persefoni
-  tier: C
-- name: PandaDoc
-  tier: C
-- name: Conga
-  tier: C
-- name: Coupa
-  tier: C
-- name: Maxio
-  tier: C
-- name: Lokalise
-  tier: C
-- name: Sinch
-  tier: C
-- name: Workable
-  tier: C
-- name: Filtered
-  tier: C
-- name: Learnerbly
-  tier: C
-- name: Meltwater
-  tier: C
-- name: DocuSign
-  tier: C
-- name: Sitecore
-  tier: C
+  sector: CX management
+  hq: San Francisco / London
+  size: 2,000–2,500
+  stage: Private (PE)
 - name: Qualtrics
   tier: C
-- name: Box
+  sector: Experience management
+  hq: Provo / London
+  size: 5,000+
+  stage: Private (PE)
+- name: Sprinklr
   tier: C
-- name: LogRocket
+  sector: CX / Social
+  hq: New York / London
+  size: 3,500–4,000
+  stage: Public
+- name: Intercom
+  tier: B
+  sector: Customer messaging
+  hq: Dublin / London
+  size: 700–1,000
+  stage: Late
+  co_notes: Dublin HQ; London team
+- name: Drift
+  tier: B
+  sector: Conversational marketing
+  hq: Boston
+  size: 500–700
+  stage: Late (acquired)
+- name: Salesloft
+  tier: B
+  sector: Sales engagement
+  hq: Atlanta / London
+  size: 700–1,000
+  stage: Late
+- name: Outreach
+  tier: B
+  sector: Sales engagement
+  hq: Seattle / London
+  size: 1,000–1,300
+  stage: Late
+- name: Highspot
+  tier: B
+  sector: Sales enablement
+  hq: Seattle / London
+  size: 1,000–1,300
+  stage: Late
+- name: Seismic
+  tier: B
+  sector: Sales enablement
+  hq: San Diego / London
+  size: 1,500–2,000
+  stage: Late
+- name: Showpad
+  tier: B
+  sector: Sales enablement
+  hq: Ghent / Chicago
+  size: 500–700
+  stage: Late
+- name: Mindtickle
+  tier: B
+  sector: Sales readiness
+  hq: San Francisco
+  size: 500–700
+  stage: Late
+- name: Chorus.ai
+  tier: B
+  sector: Conversation intelligence
+  hq: San Francisco
+  size: 300–500
+  stage: Late (acquired)
+- name: Clozd
+  tier: B
+  sector: Win-loss analysis
+  hq: Salt Lake City
+  size: 100–200
+  stage: Growth
+- name: Allego
   tier: C
-- name: PostHog
+  sector: Sales enablement
+  hq: Needham / London
+  size: 300–500
+  stage: Late
+- name: LevelJump
   tier: C
-- name: Retool
+  sector: Revenue enablement
+  hq: Toronto
+  size: 100–200
+  stage: Growth (acquired)
+- name: Dialpad
+  tier: B
+  sector: Cloud comms / AI
+  hq: San Francisco / London
+  size: 1,000–1,500
+  stage: Late
+- name: RingCentral
   tier: C
-- name: Boomi
+  sector: Cloud comms
+  hq: Belmont / London
+  size: 6,000+
+  stage: Public
+- name: Vonage
   tier: C
-- name: Sprout Social
+  sector: CPaaS
+  hq: New Jersey / London
+  size: 2,500–3,000
+  stage: Public (acquired)
+- name: Twilio
   tier: C
-- name: Hootsuite
+  sector: CPaaS
+  hq: San Francisco / London
+  size: 5,000+
+  stage: Public
+- name: MessageBird
+  tier: B
+  sector: CPaaS
+  hq: Amsterdam
+  size: 700–1,000
+  stage: Late
+- name: Natterbox
+  tier: B
+  sector: Voice / Salesforce CTI
+  hq: London (HQ)
+  size: 100–200
+  stage: Growth
+  co_notes: London HQ; niche telephony
+- name: CloudCall
   tier: C
-- name: Sophos
+  sector: CRM telephony
+  hq: Leicester / Boston
+  size: 200–400
+  stage: Public
+- name: Five9
   tier: C
-- name: SailPoint
+  sector: CCaaS
+  hq: San Ramon
+  size: 2,000–2,500
+  stage: Public
+- name: NICE
   tier: C
+  sector: CX / Analytics
+  hq: Ra'anana / London
+  size: 8,000+
+  stage: Public
+- name: Veeva Systems
+  tier: C
+  sector: Life sciences SaaS
+  hq: Pleasanton / London
+  size: 6,000+
+  stage: Public
+- name: Salesforce
+  tier: C
+  sector: CRM
+  hq: San Francisco / London
+  size: 70,000+
+  stage: Public
+- name: HubSpot
+  tier: C
+  sector: CRM / Marketing
+  hq: Cambridge MA / Dublin
+  size: 7,000+
+  stage: Public
+- name: Pipedrive
+  tier: B
+  sector: CRM
+  hq: Tallinn / London
+  size: 900–1,200
+  stage: Late
+  co_notes: Estonia HQ; London presence
+- name: Freshworks
+  tier: C
+  sector: CRM / Support
+  hq: San Mateo / London
+  size: 5,000+
+  stage: Public
+- name: Zoho
+  tier: C
+  sector: CRM / SaaS suite
+  hq: Chennai / London
+  size: 15,000+
+  stage: Private
+- name: Creatio
+  tier: B
+  sector: CRM / BPM
+  hq: Boston / London
+  size: 700–1,000
+  stage: Late
+- name: SugarCRM
+  tier: C
+  sector: CRM
+  hq: Atlanta
+  size: 500–700
+  stage: Late (PE)
+- name: Copper
+  tier: C
+  sector: CRM
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Nutshell
+  tier: C
+  sector: CRM
+  hq: Ann Arbor
+  size: 100–200
+  stage: Growth
+- name: Close
+  tier: C
+  sector: CRM
+  hq: Remote-first
+  size: 100–200
+  stage: Growth
+- name: Attio
+  tier: B
+  sector: CRM
+  hq: London (HQ)
+  size: 100–200
+  stage: Growth
+  co_notes: London HQ; modern CRM
+- name: Affinity
+  tier: B
+  sector: Relationship intelligence CRM
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Gainsight
+  tier: B
+  sector: Customer success
+  hq: San Francisco / London
+  size: 1,000–1,500
+  stage: Late
+  co_notes: CS-led; London team
+- name: ChurnZero
+  tier: B
+  sector: Customer success
+  hq: Washington DC
+  size: 300–500
+  stage: Late
+- name: Totango
+  tier: C
+  sector: Customer success
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Vitally
+  tier: B
+  sector: Customer success
+  hq: New York
+  size: 100–200
+  stage: Growth
+- name: Catalyst
+  tier: C
+  sector: Customer success
+  hq: New York
+  size: 100–200
+  stage: Growth
+- name: Planhat
+  tier: B
+  sector: Customer success
+  hq: Stockholm / London
+  size: 200–400
+  stage: Growth
+  co_notes: Stockholm HQ; London presence
+- name: UserIQ
+  tier: C
+  sector: Customer success
+  hq: Atlanta
+  size: 50–100
+  stage: Growth
+- name: Ambition
+  tier: C
+  sector: Sales performance
+  hq: Chattanooga
+  size: 50–100
+  stage: Growth
+- name: LeanData
+  tier: B
+  sector: Revenue ops / routing
+  hq: Santa Clara
+  size: 200–400
+  stage: Late
+  co_notes: RevOps tooling vendor
+- name: Crossbeam
+  tier: B
+  sector: Partner ecosystem
+  hq: Philadelphia
+  size: 200–400
+  stage: Late
+- name: Reveal
+  tier: C
+  sector: Partner ecosystem
+  hq: Paris
+  size: 100–200
+  stage: Growth
+- name: PartnerStack
+  tier: B
+  sector: Partner / channel
+  hq: Toronto
+  size: 200–400
+  stage: Late
+- name: Impartner
+  tier: C
+  sector: PRM
+  hq: South Jordan UT
+  size: 200–400
+  stage: Late
+- name: Alliances.io
+  tier: C
+  sector: Partnerships
+  hq: Remote
+  size: 50–100
+  stage: Early
+- name: Tackle.io
+  tier: B
+  sector: Cloud GTM
+  hq: Boise
+  size: 200–400
+  stage: Late
+- name: Cleverbridge
+  tier: C
+  sector: Subscription / eCommerce
+  hq: Cologne
+  size: 300–500
+  stage: Late
+- name: Chargebee
+  tier: B
+  sector: Subscription management
+  hq: San Francisco / Amsterdam
+  size: 1,000–1,500
+  stage: Late
+  co_notes: Amsterdam EMEA hub
 - name: Recurly
   tier: C
-- name: Pipefy
+  sector: Subscription billing
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Paddle
+  tier: B
+  sector: Payments / Billing
+  hq: London (HQ)
+  size: 300–500
+  stage: Late
+  co_notes: London HQ
+- name: Maxio
+  tier: B
+  sector: Subscription / billing
+  hq: Atlanta
+  size: 200–400
+  stage: Late
+- name: Ordway
   tier: C
-- name: TrustRadius
+  sector: Billing & revenue automation
+  hq: Washington DC
+  size: 100–200
+  stage: Growth
+- name: Zuora
   tier: C
-- name: G2
-  tier: C
-- name: Patchwork Health
-  tier: C
-- name: SurveyMonkey / Momentive
-  tier: C
+  sector: Subscription management
+  hq: Redwood City / London
+  size: 1,500–2,000
+  stage: Public
+- name: Stripe
+  tier: B
+  sector: Payments
+  hq: San Francisco / Dublin
+  size: 8,000+
+  stage: Pre-IPO
+  co_notes: Large GTM org; London hub
+- name: Adyen
+  tier: B
+  sector: Payments
+  hq: Amsterdam
+  size: 3,000–4,000
+  stage: Public
+  co_notes: Amsterdam HQ; London office
+- name: Klarna
+  tier: B
+  sector: BNPL / Fintech
+  hq: Stockholm / London
+  size: 4,000–5,000
+  stage: Pre-IPO
+  co_notes: Stockholm HQ; London team
+- name: Mollie
+  tier: B
+  sector: Payments
+  hq: Amsterdam / London
+  size: 700–1,000
+  stage: Late
+  co_notes: Amsterdam HQ; London office
+- name: Primer
+  tier: B
+  sector: Payments orchestration
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ; payments infra
+- name: Modulr
+  tier: B
+  sector: Payments
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ
+- name: Trustly
+  tier: B
+  sector: Open banking payments
+  hq: Stockholm / London
+  size: 700–1,000
+  stage: Late
+- name: Form3
+  tier: B
+  sector: Payment technology
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ; fintech
+- name: Currencycloud
+  tier: B
+  sector: FX / Payments
+  hq: London (HQ)
+  size: 500–700
+  stage: Late (acquired)
+  co_notes: London HQ
+- name: Airwallex
+  tier: B
+  sector: Business finance / FX
+  hq: Melbourne / London
+  size: 1,500–2,000
+  stage: Pre-IPO
+  co_notes: London hub; EMEA expansion
+- name: Rapyd
+  tier: B
+  sector: Payments
+  hq: London (HQ)
+  size: 700–1,000
+  stage: Late
+  co_notes: London HQ; global payments
+- name: Numeral
+  tier: B
+  sector: Bank payments
+  hq: Paris
+  size: 50–100
+  stage: Growth
+- name: Gr4vy
+  tier: B
+  sector: Payments orchestration
+  hq: London / San Jose
+  size: 50–100
+  stage: Growth
+  co_notes: London presence
+- name: Stytch
+  tier: B
+  sector: Auth / Identity
+  hq: San Francisco
+  size: 100–200
+  stage: Growth
+- name: WorkOS
+  tier: B
+  sector: Enterprise auth
+  hq: San Francisco
+  size: 100–200
+  stage: Growth
+- name: Frontegg
+  tier: B
+  sector: Auth / Identity
+  hq: Tel Aviv / London
+  size: 100–200
+  stage: Growth
+- name: Navan
+  tier: B
+  sector: Business travel & expense
+  hq: Palo Alto / London
+  size: 3,000–4,000
+  stage: Pre-IPO
+  co_notes: London hub; scaling EMEA
 - name: Expensify
   tier: C
+  sector: Expense management
+  hq: Portland
+  size: 200–400
+  stage: Public
 - name: SAP Concur
   tier: C
-- name: Habito
+  sector: T&E
+  hq: Bellevue
+  size: (SAP division)
+  stage: Public
+- name: Coupa
   tier: C
-- name: Re-Leased
+  sector: Business spend
+  hq: San Mateo / London
+  size: 2,000–2,500
+  stage: Private (PE)
+- name: Ivalua
   tier: C
-- name: Fixflo
+  sector: Procurement
+  hq: Redwood City / Paris
+  size: 800–1,000
+  stage: Late
+- name: Jaggaer
   tier: C
-- name: Castor
+  sector: Procurement
+  hq: Morrisville
+  size: 1,000–1,500
+  stage: Late (PE)
+- name: Globality
   tier: C
+  sector: AI procurement
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Pactum
+  tier: B
+  sector: AI negotiation
+  hq: Palo Alto / Tallinn
+  size: 100–200
+  stage: Growth
+- name: Zettle (PayPal)
+  tier: C
+  sector: POS / Payments
+  hq: Stockholm
+  size: (PayPal division)
+  stage: Public
+- name: SumUp
+  tier: B
+  sector: SMB payments
+  hq: London (HQ)
+  size: 3,000–4,000
+  stage: Late
+  co_notes: London HQ; fintech scale-up
+- name: iZettle
+  tier: C
+  sector: POS
+  hq: Stockholm
+  size: (PayPal division)
+  stage: Public
+- name: Square
+  tier: C
+  sector: Payments / POS
+  hq: San Francisco / London
+  size: 13,000+
+  stage: Public
+- name: Toast
+  tier: C
+  sector: Restaurant tech
+  hq: Boston
+  size: 5,000+
+  stage: Public
+- name: Lightspeed
+  tier: C
+  sector: POS / Commerce
+  hq: Montreal / Amsterdam
+  size: 3,000–4,000
+  stage: Public
+- name: Phorest
+  tier: B
+  sector: Salon software
+  hq: Dublin
+  size: 300–500
+  stage: Growth
+- name: Mindbody
+  tier: C
+  sector: Wellness software
+  hq: San Luis Obispo
+  size: 1,000–1,500
+  stage: Late
+- name: Treatwell
+  tier: B
+  sector: Beauty marketplace
+  hq: London (HQ)
+  size: 300–500
+  stage: Late
+  co_notes: London HQ; marketplace model
+- name: Fresha
+  tier: B
+  sector: Beauty / wellness SaaS
+  hq: London (HQ)
+  size: 700–1,000
+  stage: Late
+  co_notes: London HQ; global expansion
+- name: Doctify
+  tier: B
+  sector: Healthtech
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ; healthcare SaaS
+- name: Accurx
+  tier: B
+  sector: Healthcare comms
+  hq: London (HQ)
+  size: 400–600
+  stage: Growth
+  co_notes: London HQ; NHS-focused
+- name: Babylon Health
+  tier: C
+  sector: Digital health
+  hq: London
+  size: 1,500–2,000
+  stage: Late
+  co_notes: Restructured; watch
+- name: Featurespace
+  tier: B
+  sector: Fraud / AI
+  hq: Cambridge (HQ)
+  size: 300–500
+  stage: Late
+  co_notes: Cambridge HQ; UK-based
+- name: Ravelin
+  tier: B
+  sector: Fraud prevention
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ
+- name: Sift
+  tier: B
+  sector: Fraud prevention
+  hq: San Francisco
+  size: 500–700
+  stage: Late
+- name: Signifyd
+  tier: B
+  sector: E-commerce fraud
+  hq: San Jose / London
+  size: 500–700
+  stage: Late
+  co_notes: London office
+- name: Forter
+  tier: B
+  sector: Fraud prevention
+  hq: New York / London
+  size: 500–700
+  stage: Late
+  co_notes: London presence
+- name: Imperva
+  tier: C
+  sector: Cybersecurity
+  hq: San Mateo / London
+  size: 1,500–2,000
+  stage: Late (PE)
+- name: Darktrace
+  tier: B
+  sector: AI cybersecurity
+  hq: Cambridge (HQ)
+  size: 2,000–2,500
+  stage: Public
+  co_notes: Cambridge HQ; UK-listed
+- name: Tessian
+  tier: B
+  sector: Email security
+  hq: London (HQ)
+  size: 200–400
+  stage: Late (acquired)
+  co_notes: London HQ
+- name: Abnormal Security
+  tier: B
+  sector: Email security
+  hq: San Francisco / London
+  size: 500–700
+  stage: Late
+  co_notes: London expansion
+- name: Lacework
+  tier: B
+  sector: Cloud security
+  hq: Mountain View
+  size: 700–1,000
+  stage: Late
+- name: Orca Security
+  tier: B
+  sector: Cloud security
+  hq: Tel Aviv / London
+  size: 500–700
+  stage: Late
+  co_notes: London presence
+- name: Wiz
+  tier: B
+  sector: Cloud security
+  hq: New York / Tel Aviv
+  size: 1,500–2,000
+  stage: Late
+- name: Snyk
+  tier: A
+  sector: DevSecOps
+  hq: London + Boston
+  size: 1,000–1,300
+  stage: Late
+  co_notes: Strong London GTM, data-rich
+- name: Semgrep
+  tier: B
+  sector: Code security
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Socket
+  tier: B
+  sector: Supply chain security
+  hq: San Francisco
+  size: 50–100
+  stage: Growth
+- name: Chainguard
+  tier: B
+  sector: Supply chain security
+  hq: Kirkland WA
+  size: 200–400
+  stage: Growth
+- name: Artefact
+  tier: B
+  sector: Data / AI consultancy
+  hq: Paris / London
+  size: 1,500–2,000
+  stage: Growth
+  co_notes: Paris HQ; London office
+- name: Quantium
+  tier: B
+  sector: Data analytics
+  hq: Sydney / London
+  size: 1,500–2,000
+  stage: Late
+- name: ZS Associates
+  tier: C
+  sector: Consulting / analytics
+  hq: Evanston / London
+  size: 12,000+
+  stage: Private
+- name: dbt Labs
+  tier: B
+  sector: Analytics engineering
+  hq: Philadelphia / remote
+  size: 500–700
+  stage: Late
+  co_notes: Analytics-native
+- name: Fivetran
+  tier: B
+  sector: Data integration
+  hq: Oakland / London
+  size: 1,200–1,600
+  stage: Late
+  co_notes: London office
+- name: Airbyte
+  tier: B
+  sector: Data integration
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Stitch Data
+  tier: C
+  sector: ETL
+  hq: New York
+  size: 100–200
+  stage: Late (acquired)
+- name: Looker (Google)
+  tier: C
+  sector: BI
+  hq: Santa Cruz / London
+  size: (Google division)
+  stage: Public
+- name: Sigma Computing
+  tier: B
+  sector: BI
+  hq: San Francisco
+  size: 300–500
+  stage: Late
+- name: ThoughtSpot
+  tier: B
+  sector: BI / AI analytics
+  hq: Sunnyvale / London
+  size: 1,000–1,300
+  stage: Late
+  co_notes: London office
+- name: Yellowbrick Data
+  tier: C
+  sector: Data warehouse
+  hq: Mountain View
+  size: 200–400
+  stage: Late
+- name: Starburst
+  tier: B
+  sector: Data mesh / analytics
+  hq: Boston / remote
+  size: 500–700
+  stage: Late
+- name: Monte Carlo
+  tier: B
+  sector: Data observability
+  hq: San Francisco
+  size: 300–500
+  stage: Late
+- name: Atlan
+  tier: B
+  sector: Data catalog
+  hq: Singapore / London
+  size: 300–500
+  stage: Late
+  co_notes: London presence
+- name: Alation
+  tier: B
+  sector: Data catalog
+  hq: Redwood City
+  size: 500–700
+  stage: Late
+- name: Collibra
+  tier: B
+  sector: Data governance
+  hq: Brussels / New York
+  size: 1,000–1,500
+  stage: Late
+  co_notes: European HQ
+- name: Immuta
+  tier: B
+  sector: Data security
+  hq: Boston
+  size: 300–500
+  stage: Late
+- name: Securiti
+  tier: B
+  sector: Data security / privacy
+  hq: San Jose
+  size: 500–700
+  stage: Late
+- name: Privitar
+  tier: B
+  sector: Data privacy
+  hq: London (HQ)
+  size: 200–400
+  stage: Late
+  co_notes: London HQ
+- name: Mixpanel
+  tier: B
+  sector: Product analytics
+  hq: San Francisco / London
+  size: 400–600
+  stage: Late
+  co_notes: Analytics-native
+- name: Heap
+  tier: B
+  sector: Product analytics
+  hq: San Francisco
+  size: 300–500
+  stage: Late
+- name: Productboard
+  tier: B
+  sector: Product management
+  hq: San Francisco / Prague
+  size: 400–600
+  stage: Late
+- name: Aha!
+  tier: C
+  sector: Product management
+  hq: Remote-first
+  size: 200–400
+  stage: Late
+- name: Notion
+  tier: B
+  sector: Productivity / wiki
+  hq: San Francisco
+  size: 500–700
+  stage: Late
+- name: Coda
+  tier: B
+  sector: Docs / data
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Airtable
+  tier: B
+  sector: No-code database
+  hq: San Francisco
+  size: 700–1,000
+  stage: Late
+- name: Smartsheet
+  tier: C
+  sector: Work management
+  hq: Bellevue / London
+  size: 3,000–4,000
+  stage: Public
+- name: Asana
+  tier: C
+  sector: Work management
+  hq: San Francisco / London
+  size: 1,500–2,000
+  stage: Public
+- name: ClickUp
+  tier: B
+  sector: Productivity
+  hq: San Diego
+  size: 1,000–1,500
+  stage: Late
+- name: Linear
+  tier: B
+  sector: Project management
+  hq: San Francisco
+  size: 100–200
+  stage: Growth
+- name: Height
+  tier: C
+  sector: Project management
+  hq: San Francisco
+  size: 50–100
+  stage: Growth
+- name: Retool
+  tier: B
+  sector: Internal tools
+  hq: San Francisco
+  size: 300–500
+  stage: Late
+- name: Glide
+  tier: B
+  sector: No-code apps
+  hq: Remote-first
+  size: 100–200
+  stage: Growth
+- name: Stacker
+  tier: C
+  sector: No-code apps
+  hq: London (HQ)
+  size: 50–100
+  stage: Growth
+  co_notes: London HQ
+- name: Softr
+  tier: B
+  sector: No-code apps
+  hq: Berlin / London
+  size: 100–200
+  stage: Growth
+- name: Bubble
+  tier: B
+  sector: No-code dev
+  hq: New York
+  size: 200–400
+  stage: Late
+- name: Zapier
+  tier: B
+  sector: Automation
+  hq: Remote-first
+  size: 700–1,000
+  stage: Late
+- name: Make (Integromat)
+  tier: B
+  sector: Automation
+  hq: Prague
+  size: 300–500
+  stage: Late
+- name: Workato
+  tier: B
+  sector: Integration platform
+  hq: Mountain View / London
+  size: 700–1,000
+  stage: Late
+  co_notes: London presence
+- name: Boomi
+  tier: C
+  sector: iPaaS
+  hq: Chesterbrook PA
+  size: 1,500–2,000
+  stage: Late (PE)
+- name: MuleSoft
+  tier: C
+  sector: iPaaS
+  hq: San Francisco
+  size: (Salesforce division)
+  stage: Public
+- name: Celigo
+  tier: B
+  sector: iPaaS
+  hq: Pleasanton
+  size: 300–500
+  stage: Late
+- name: Tray.io
+  tier: B
+  sector: Automation platform
+  hq: San Francisco / London
+  size: 200–400
+  stage: Late
+  co_notes: London presence
+- name: n8n
+  tier: B
+  sector: Workflow automation
+  hq: Berlin
+  size: 200–400
+  stage: Growth
+- name: Segment (Twilio)
+  tier: B
+  sector: CDP
+  hq: San Francisco
+  size: (Twilio division)
+  stage: Public
+- name: mParticle
+  tier: B
+  sector: CDP
+  hq: New York / London
+  size: 300–500
+  stage: Late
+  co_notes: London office
+- name: Rudderstack
+  tier: B
+  sector: CDP / data pipeline
+  hq: San Francisco
+  size: 200–400
+  stage: Late
+- name: Treasure Data
+  tier: C
+  sector: CDP
+  hq: Mountain View
+  size: 500–700
+  stage: Late
+- name: Bloomreach
+  tier: B
+  sector: CDP / commerce
+  hq: Mountain View / London
+  size: 700–1,000
+  stage: Late
+  co_notes: London office
+- name: Lytics
+  tier: C
+  sector: CDP
+  hq: Portland
+  size: 100–200
+  stage: Late
+- name: Emarsys (SAP)
+  tier: C
+  sector: Marketing automation
+  hq: Vienna / London
+  size: 800–1,000
+  stage: Public (acquired)
+- name: Klaviyo
+  tier: B
+  sector: Marketing automation
+  hq: Boston / London
+  size: 1,500–2,000
+  stage: Public
+  co_notes: London office; marketing-led
+- name: Marketo (Adobe)
+  tier: C
+  sector: Marketing automation
+  hq: San Jose
+  size: (Adobe division)
+  stage: Public
+- name: Pardot (Salesforce)
+  tier: C
+  sector: Marketing automation
+  hq: San Francisco
+  size: (Salesforce division)
+  stage: Public
+- name: ActiveCampaign
+  tier: B
+  sector: Marketing automation / CRM
+  hq: Chicago / London
+  size: 1,000–1,500
+  stage: Late
+  co_notes: London office
+- name: Customer.io
+  tier: B
+  sector: Marketing automation
+  hq: Remote-first
+  size: 300–500
+  stage: Late
+- name: Iterable
+  tier: B
+  sector: Marketing automation
+  hq: San Francisco / London
+  size: 500–700
+  stage: Late
+  co_notes: London office
+- name: Ortto
+  tier: B
+  sector: Marketing automation
+  hq: Sydney / London
+  size: 100–200
+  stage: Growth
+- name: Postscript
+  tier: B
+  sector: SMS marketing
+  hq: Remote-first
+  size: 200–400
+  stage: Late
+- name: Attentive
+  tier: B
+  sector: Mobile marketing
+  hq: New York / London
+  size: 1,000–1,500
+  stage: Late
+  co_notes: London office
+- name: Yotpo
+  tier: B
+  sector: E-commerce marketing
+  hq: New York / Tel Aviv
+  size: 500–700
+  stage: Late
+- name: Bazaarvoice
+  tier: C
+  sector: UGC / Reviews
+  hq: Austin / London
+  size: 700–1,000
+  stage: Late (PE)
+  co_notes: London office
+- name: Trustpilot
+  tier: B
+  sector: Reviews / trust
+  hq: Copenhagen / London
+  size: 900–1,200
+  stage: Public
+  co_notes: London office; public
+- name: G2
+  tier: B
+  sector: Software reviews
+  hq: Chicago
+  size: 500–700
+  stage: Late
+- name: Bombora
+  tier: B
+  sector: B2B intent data
+  hq: New York
+  size: 300–500
+  stage: Late
+- name: TechTarget
+  tier: C
+  sector: B2B media / intent
+  hq: Newton MA
+  size: 1,000–1,300
+  stage: Public
+- name: ZoomInfo
+  tier: B
+  sector: Go-to-market intelligence
+  hq: Vancouver WA / London
+  size: 3,000–4,000
+  stage: Public
+  co_notes: London office
+- name: Lusha
+  tier: B
+  sector: Sales intelligence
+  hq: Tel Aviv / London
+  size: 300–500
+  stage: Late
+  co_notes: London office
+- name: Hunter.io
+  tier: C
+  sector: Email finding
+  hq: Paris
+  size: 50–100
+  stage: Growth
+- name: Clearbit
+  tier: B
+  sector: B2B data enrichment
+  hq: San Francisco
+  size: 200–400
+  stage: Late (acquired)
+- name: Clay
+  tier: B
+  sector: Data enrichment / GTM
+  hq: New York
+  size: 100–200
+  stage: Growth
+  co_notes: Emerging GTM tool
+- name: Common Room
+  tier: B
+  sector: Community-led growth
+  hq: Seattle
+  size: 100–200
+  stage: Growth
+- name: Orbit
+  tier: C
+  sector: Community / DevRel
+  hq: Remote-first
+  size: 50–100
+  stage: Growth
+- name: Bevy
+  tier: C
+  sector: Community events
+  hq: Palo Alto
+  size: 100–200
+  stage: Growth
+- name: Hopin
+  tier: B
+  sector: Virtual events
+  hq: London (HQ)
+  size: 700–1,000
+  stage: Late
+  co_notes: London HQ; restructured post-COVID
+- name: ON24
+  tier: C
+  sector: Webinar / digital events
+  hq: San Francisco / London
+  size: 700–1,000
+  stage: Public
+- name: Goldcast
+  tier: C
+  sector: B2B events
+  hq: Boston
+  size: 100–200
+  stage: Growth
+- name: Bizzabo
+  tier: B
+  sector: Event management
+  hq: New York / Tel Aviv
+  size: 300–500
+  stage: Late
+- name: Splash
+  tier: C
+  sector: Event marketing
+  hq: New York
+  size: 200–400
+  stage: Late
+- name: Cvent
+  tier: C
+  sector: Event management
+  hq: Tysons / London
+  size: 4,000–5,000
+  stage: Public
+- name: Papaya Global
+  tier: B
+  sector: Global payroll
+  hq: Tel Aviv / London
+  size: 700–1,000
+  stage: Late
+  co_notes: London office
+- name: Deel
+  tier: A
+  sector: HR / Payroll (EOR)
+  hq: Remote-first
+  size: 4,000–5,000
+  stage: Pre-IPO
+  co_notes: Huge sales org; remote-friendly
+- name: Remote
+  tier: A
+  sector: HR / EOR
+  hq: Remote-first
+  size: 1,500–2,000
+  stage: Late
+  co_notes: Fully distributed; RevOps critical
+- name: Oyster HR
+  tier: B
+  sector: EOR / global hiring
+  hq: Remote-first
+  size: 500–700
+  stage: Late
+- name: Multiplier
+  tier: B
+  sector: EOR
+  hq: Singapore / London
+  size: 300–500
+  stage: Late
+  co_notes: London presence
+- name: Velocity Global
+  tier: B
+  sector: EOR
+  hq: Denver
+  size: 700–1,000
+  stage: Late
+- name: Lattice
+  tier: B
+  sector: People management
+  hq: San Francisco / London
+  size: 500–700
+  stage: Late
+  co_notes: London office
+- name: Culture Amp
+  tier: B
+  sector: Employee experience
+  hq: Melbourne / London
+  size: 700–1,000
+  stage: Late
+  co_notes: London office
+- name: Workday
+  tier: C
+  sector: HCM / Finance
+  hq: Pleasanton / Dublin
+  size: 18,000+
+  stage: Public
+- name: BambooHR
+  tier: C
+  sector: HRIS
+  hq: Lindon UT
+  size: 1,000–1,500
+  stage: Late
+- name: Leapsome
+  tier: B
+  sector: People enablement
+  hq: Berlin / London
+  size: 200–400
+  stage: Growth
+  co_notes: Berlin HQ; London office
+- name: Peakon (Workday)
+  tier: C
+  sector: Employee engagement
+  hq: Copenhagen
+  size: (Workday division)
+  stage: Public
+- name: Kry / Livi
+  tier: B
+  sector: Digital health
+  hq: Stockholm / London
+  size: 700–1,000
+  stage: Late
+  co_notes: Stockholm HQ; London (Livi)
+- name: Simprints
+  tier: B
+  sector: Biometrics / NGO tech
+  hq: Cambridge (HQ)
+  size: 50–100
+  stage: Growth
+  co_notes: Cambridge HQ; social impact
+- name: Thought Machine
+  tier: B
+  sector: Core banking SaaS
+  hq: London (HQ)
+  size: 500–700
+  stage: Late
+  co_notes: London HQ; banking infra
+- name: 10x Banking
+  tier: B
+  sector: Core banking SaaS
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ
+- name: Mambu
+  tier: B
+  sector: Cloud banking
+  hq: Amsterdam / London
+  size: 700–1,000
+  stage: Late
+  co_notes: Amsterdam HQ; London office
+- name: Temenos
+  tier: C
+  sector: Banking software
+  hq: Geneva / London
+  size: 7,000+
+  stage: Public
+- name: Finastra
+  tier: C
+  sector: Financial software
+  hq: London (HQ)
+  size: 8,000+
+  stage: Late (PE)
+  co_notes: London HQ; large but mature
+- name: Nuvei
+  tier: B
+  sector: Payments
+  hq: Montreal / London
+  size: 1,500–2,000
+  stage: Public
+  co_notes: London office
+- name: Paysafe
+  tier: C
+  sector: Payments
+  hq: London (HQ)
+  size: 3,000–4,000
+  stage: Public
+- name: Yapily
+  tier: B
+  sector: Open banking API
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ
+- name: TrueLayer
+  tier: B
+  sector: Open banking
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ
+- name: Banked
+  tier: B
+  sector: A2A payments
+  hq: London (HQ)
+  size: 100–200
+  stage: Growth
+  co_notes: London HQ
+- name: Bud Financial
+  tier: B
+  sector: Open banking / data
+  hq: London (HQ)
+  size: 100–200
+  stage: Growth
+  co_notes: London HQ
+- name: Tink (Visa)
+  tier: B
+  sector: Open banking
+  hq: Stockholm / London
+  size: 500–700
+  stage: Late (acquired)
+  co_notes: Stockholm HQ; London presence
+- name: Plaid
+  tier: B
+  sector: Financial data API
+  hq: San Francisco / London
+  size: 1,000–1,500
+  stage: Late
+  co_notes: London office
+- name: Finicity
+  tier: C
+  sector: Financial data
+  hq: Salt Lake City
+  size: 300–500
+  stage: Late (acquired)
+- name: MX Technologies
+  tier: C
+  sector: Financial data
+  hq: Lehi UT
+  size: 500–700
+  stage: Late
+- name: Thought Machine
+  tier: B
+  sector: Core banking SaaS
+  hq: London (HQ)
+  size: 500–700
+  stage: Late
+  co_notes: London HQ; banking infra
+- name: NuBank
+  tier: C
+  sector: Neobank
+  hq: São Paulo / London
+  size: 7,000+
+  stage: Public
+- name: Monzo
+  tier: B
+  sector: Neobank
+  hq: London (HQ)
+  size: 2,000–2,500
+  stage: Late
+  co_notes: London HQ; UK challenger bank
+- name: Starling Bank
+  tier: B
+  sector: Neobank
+  hq: London (HQ)
+  size: 2,500–3,000
+  stage: Late
+  co_notes: London HQ; UK challenger bank
+- name: Revolut
+  tier: B
+  sector: Neobank / Fintech
+  hq: London (HQ)
+  size: 8,000+
+  stage: Pre-IPO
+  co_notes: London HQ; aggressive scaling
+- name: Wise
+  tier: B
+  sector: FX / International payments
+  hq: London (HQ)
+  size: 3,000–4,000
+  stage: Public
+  co_notes: London HQ
+- name: OakNorth
+  tier: B
+  sector: SMB lending
+  hq: London (HQ)
+  size: 700–1,000
+  stage: Late
+  co_notes: London HQ
+- name: Allica Bank
+  tier: B
+  sector: SMB banking
+  hq: London (HQ)
+  size: 300–500
+  stage: Growth
+  co_notes: London HQ
+- name: Kroo
+  tier: B
+  sector: Neobank
+  hq: London (HQ)
+  size: 100–200
+  stage: Growth
+  co_notes: London HQ
+- name: Zilch
+  tier: B
+  sector: BNPL
+  hq: London (HQ)
+  size: 300–500
+  stage: Growth
+  co_notes: London HQ
+- name: Curve
+  tier: B
+  sector: Card aggregation
+  hq: London (HQ)
+  size: 200–400
+  stage: Growth
+  co_notes: London HQ
+- name: iwoca
+  tier: B
+  sector: SMB lending
+  hq: London (HQ)
+  size: 400–600
+  stage: Growth
+  co_notes: London HQ

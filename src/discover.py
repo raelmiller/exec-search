@@ -15,6 +15,8 @@ DATA = ROOT / "data"
 PROBE_ORDER = ["greenhouse", "lever", "ashby", "smartrecruiters", "workable", "recruitee", "personio"]
 SUFFIXES = ("bank", "labs", "ai", "io", "hq", "app", "inc", "ltd", "group")
 
+EXTRA_FIELDS = ("sector", "hq", "size", "stage", "co_notes")
+
 
 def slug_candidates(name):
     base = name.strip().lower()
@@ -72,10 +74,16 @@ def run(companies_path=None):
     for c in companies:
         name = c["name"]
         if name in resolved and resolved[name].get("token") and not c.get("force_rediscover"):
+            for field in EXTRA_FIELDS:
+                if c.get(field):
+                    resolved[name][field] = c[field]
             continue
         r = resolve_one(name, c.get("ats"), c.get("token"))
         if r:
             r["tier"] = c.get("tier", "")
+            for field in EXTRA_FIELDS:
+                if c.get(field):
+                    r[field] = c[field]
             resolved[name] = r
             print(f"  resolved  {name:24s} -> {r['ats']}:{r['token']} ({r['jobs']} jobs)")
         else:

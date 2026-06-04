@@ -1,67 +1,61 @@
-"""ATS pollers.
+"""Thin ATS polling layer.
 
-Each public applicant tracking system exposes an unauthenticated job feed.
-We hit the structured endpoint per company rather than scraping careers pages,
-then normalise every posting into one shape:
+Each normaliser returns a list of dicts with keys:
+    ext      – the ATS-native job ID
+    title    – job title
+    location – location string (may be empty)
+    url      – link to apply
+    department – team/department (optional)
+    posted   – ISO datetime string (optional)
 
-    {company, company_tier, ats, id, title, location, url, department, posted}
-
-`id` is globally unique: "{company}:{ats}:{external_id}" so dedup is clean
-even if two companies share an external id.
+fetch() wraps them with company metadata.
 """
 from __future__ import annotations
+import re
 import xml.etree.ElementTree as ET
+
 import requests
 
-TIMEOUT = 20
-HEADERS = {"User-Agent": "role-monitor/1.0 (personal job-search tool)"}
-
-ENDPOINTS = {
-    "greenhouse":     "https://boards-api.greenhouse.io/v1/boards/{t}/jobs?content=true",
-    "lever":          "https://api.lever.co/v0/postings/{t}?mode=json",
-    "ashby":          "https://api.ashbyhq.com/posting-api/job-board/{t}?includeCompensation=true",
-    "smartrecruiters":"https://api.smartrecruiters.com/v1/companies/{t}/postings?limit=100",
-    "workable":       "https://apply.workable.com/api/v1/widget/accounts/{t}",
-    "recruitee":      "https://{t}.recruitee.com/api/offers/",
-    "personio":       "https://{t}.jobs.personio.de/xml?language=en",
-}
+SESSION = requests.Session()
+SESSION.headers["User-Agent"] = "role-monitor/1.0"
 
 
-def _get(url):
-    r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
-    r.raise_for_status()
-    return r
+def _get(url, **kw):
+    return SESSION.get(url, timeout=15, **kw)
 
 
-def _loc_from_parts(*parts):
-    return ", ".join(str(p) for p in parts if p)
-
+# ---------------------------------------------------------------------------
+# Normalisers
+# ---------------------------------------------------------------------------
 
 def _greenhouse(token, data):
     out = []
     for j in data.get("jobs", []):
+        locs = ", ".join(o.get("name", "") for o in j.get("offices", [])) or \
+               ", ".join(l.get("name", "") for l in j.get("location", {}).get("name", "").split(",") if l) or \
+               j.get("location", {}).get("name", "")
         out.append(dict(
-            ext=str(j.get("id")),
+            ext=str(j["id"]),
             title=j.get("title", ""),
-            location=(j.get("location") or {}).get("name", ""),
+            location=locs,
             url=j.get("absolute_url", ""),
             department=", ".join(d.get("name", "") for d in j.get("departments", [])),
-            posted=j.get("updated_at", "") or j.get("first_published", ""),
+            posted=j.get("updated_at", ""),
         ))
     return out
 
 
 def _lever(token, data):
     out = []
-    for j in data:
-        cats = j.get("categories", {}) or {}
+    for j in data if isinstance(data, list) else []:
+        cats = j.get("categories", {})
         out.append(dict(
-            ext=str(j.get("id")),
+            ext=j["id"],
             title=j.get("text", ""),
             location=cats.get("location", ""),
-            url=j.get("hostedUrl", "") or j.get("applyUrl", ""),
-            department=cats.get("department", "") or cats.get("team", ""),
-            posted=str(j.get("createdAt", "")),
+            url=j.get("hostedUrl", ""),
+            department=cats.get("team", ""),
+            posted=j.get("createdAt", ""),
         ))
     return out
 
@@ -69,13 +63,17 @@ def _lever(token, data):
 def _ashby(token, data):
     out = []
     for j in data.get("jobs", []):
+        loc = ""
+        for l in j.get("jobLocations", []):
+            loc = l.get("locationName", l.get("city", ""))
+            break
         out.append(dict(
-            ext=str(j.get("id")),
+            ext=j["id"],
             title=j.get("title", ""),
-            location=j.get("location", "") or "",
-            url=j.get("jobUrl", "") or j.get("applyUrl", "") or j.get("jobPostingUrl", ""),
-            department=j.get("department", "") or j.get("team", ""),
-            posted=j.get("publishedAt", "") or j.get("updatedAt", ""),
+            location=loc,
+            url=j.get("jobUrl", ""),
+            department=j.get("departmentName", ""),
+            posted=j.get("publishedDate", ""),
         ))
     return out
 
@@ -83,16 +81,15 @@ def _ashby(token, data):
 def _smartrecruiters(token, data):
     out = []
     for j in data.get("content", []):
-        loc = j.get("location", {}) or {}
-        ext = str(j.get("id"))
+        loc = j.get("location", {})
+        loc_str = ", ".join(filter(None, [loc.get("city"), loc.get("country")]))
         out.append(dict(
-            ext=ext,
+            ext=j["id"],
             title=j.get("name", ""),
-            location=_loc_from_parts(loc.get("city"), loc.get("region"), loc.get("country"))
-                     + (" (remote)" if loc.get("remote") else ""),
-            url=f"https://jobs.smartrecruiters.com/{token}/{ext}",
-            department=(j.get("department") or {}).get("label", "") if isinstance(j.get("department"), dict) else "",
-            posted=j.get("releasedDate", "") or j.get("createdOn", ""),
+            location=loc_str,
+            url=f"https://jobs.smartrecruiters.com/{token}/{j['id']}",
+            department=j.get("department", {}).get("label", ""),
+            posted=j.get("releasedDate", ""),
         ))
     return out
 
@@ -100,21 +97,13 @@ def _smartrecruiters(token, data):
 def _workable(token, data):
     out = []
     for j in data.get("jobs", []):
-        loc = j.get("location", {}) or {}
-        if isinstance(loc, dict):
-            location = _loc_from_parts(loc.get("city"), loc.get("region"), loc.get("country"))
-            if loc.get("telecommuting") or loc.get("workplace") == "remote":
-                location += " (remote)"
-        else:
-            location = str(loc)
-        shortcode = j.get("shortcode", "")
         out.append(dict(
-            ext=str(shortcode or j.get("id", "")),
+            ext=j.get("shortcode", j.get("id", "")),
             title=j.get("title", ""),
-            location=location,
-            url=j.get("url", "") or f"https://apply.workable.com/{token}/j/{shortcode}/",
-            department=j.get("department", "") or "",
-            posted=j.get("published_on", "") or j.get("created_at", ""),
+            location=j.get("location", {}).get("city", ""),
+            url=j.get("url", ""),
+            department=j.get("department", ""),
+            posted=j.get("created_at", ""),
         ))
     return out
 
@@ -123,43 +112,59 @@ def _recruitee(token, data):
     out = []
     for j in data.get("offers", []):
         out.append(dict(
-            ext=str(j.get("id")),
+            ext=str(j["id"]),
             title=j.get("title", ""),
-            location=j.get("location", "") or _loc_from_parts(j.get("city"), j.get("country_code")),
-            url=j.get("careers_url", "") or j.get("careers_apply_url", ""),
-            department=j.get("department", "") or "",
-            posted=j.get("published_at", "") or j.get("created_at", ""),
+            location=j.get("location", ""),
+            url=j.get("careers_url", ""),
+            department=j.get("department", ""),
+            posted=j.get("published_at", ""),
         ))
     return out
 
 
-def _personio(token, raw_text):
+def _personio(token, text):
     out = []
-    root = ET.fromstring(raw_text)
-    for pos in root.iter("position"):
-        def g(tag):
-            el = pos.find(tag)
-            return el.text.strip() if el is not None and el.text else ""
-        ext = g("id")
-        out.append(dict(
-            ext=ext,
-            title=g("name"),
-            location=g("office"),
-            url=f"https://{token}.jobs.personio.de/job/{ext}",
-            department=g("department") or g("recruitingCategory"),
-            posted=g("createdAt"),
-        ))
+    try:
+        root = ET.fromstring(text)
+        for pos in root.findall(".//position"):
+            def t(tag):
+                el = pos.find(tag)
+                return el.text.strip() if el is not None and el.text else ""
+            out.append(dict(
+                ext=t("id") or t("jobId"),
+                title=t("name"),
+                location=t("office"),
+                url=t("jobDescriptions/jobDescription/URL") or t("occupationCode"),
+                department=t("department"),
+                posted=t("createdAt"),
+            ))
+    except ET.ParseError:
+        pass
     return out
 
+
+ENDPOINTS = {
+    "greenhouse": "https://boards-api.greenhouse.io/v1/boards/{t}/jobs?content=true",
+    "lever": "https://api.lever.co/v0/postings/{t}?mode=json",
+    "ashby": "https://api.ashbyhq.com/posting-api/job-board/{t}",
+    "smartrecruiters": "https://api.smartrecruiters.com/v1/companies/{t}/postings?status=PUBLISHED&limit=100",
+    "workable": "https://apply.workable.com/api/v3/accounts/{t}/jobs",
+    "recruitee": "https://{t}.recruitee.com/api/offers",
+    "personio": "https://{t}.jobs.personio.de/xml",
+}
 
 NORMALISERS = {
-    "greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby,
-    "smartrecruiters": _smartrecruiters, "workable": _workable,
-    "recruitee": _recruitee, "personio": _personio,
+    "greenhouse": _greenhouse,
+    "lever": _lever,
+    "ashby": _ashby,
+    "smartrecruiters": _smartrecruiters,
+    "workable": _workable,
+    "recruitee": _recruitee,
+    "personio": _personio,
 }
 
 
-def fetch(ats, token, company="", company_tier=""):
+def fetch(ats, token, company="", company_tier="", extra=None):
     """Poll one company's ATS feed and return normalised jobs (or [] on failure)."""
     ats = ats.lower()
     if ats not in ENDPOINTS:
@@ -175,7 +180,7 @@ def fetch(ats, token, company="", company_tier=""):
     for r in rows:
         if not r.get("title"):
             continue
-        jobs.append(dict(
+        job = dict(
             company=company or token,
             company_tier=company_tier,
             ats=ats,
@@ -185,5 +190,8 @@ def fetch(ats, token, company="", company_tier=""):
             url=r.get("url", ""),
             department=(r.get("department") or "").strip(),
             posted=str(r.get("posted") or ""),
-        ))
+        )
+        if extra:
+            job.update(extra)
+        jobs.append(job)
     return jobs
