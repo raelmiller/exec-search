@@ -4,105 +4,177 @@
     "token": "clickhouse",
     "jobs": 169,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "OLAP / Data infra",
+    "hq": "San Francisco / Amsterdam",
+    "size": "400\u2013600",
+    "stage": "Late"
   },
   "Cohere": {
     "ats": "ashby",
     "token": "cohere",
     "jobs": 132,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Enterprise AI / LLM",
+    "hq": "Toronto / London",
+    "size": "500\u2013800",
+    "stage": "Late",
+    "co_notes": "Enterprise AI; London presence"
   },
   "Databricks": {
     "ats": "greenhouse",
     "token": "databricks",
     "jobs": 748,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Data & AI platform",
+    "hq": "San Francisco / London",
+    "size": "6,000+",
+    "stage": "Pre-IPO",
+    "co_notes": "Massive GTM; London hub"
   },
   "Deel": {
     "ats": "ashby",
     "token": "deel",
     "jobs": 53,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "HR / Payroll (EOR)",
+    "hq": "Remote-first",
+    "size": "4,000\u20135,000",
+    "stage": "Pre-IPO",
+    "co_notes": "Huge sales org; remote-friendly"
   },
   "DeepL": {
     "ats": "ashby",
     "token": "deepl",
     "jobs": 24,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Translation AI",
+    "hq": "Cologne / London",
+    "size": "700\u20131,000",
+    "stage": "Late"
   },
   "GoCardless": {
     "ats": "greenhouse",
     "token": "gocardless",
     "jobs": 32,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Open banking / Payments",
+    "hq": "London (HQ)",
+    "size": "800\u20131,000",
+    "stage": "Late",
+    "co_notes": "London HQ, strong RevOps need"
   },
   "Gong": {
     "ats": "smartrecruiters",
     "token": "gong",
     "jobs": 9,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Revenue intelligence",
+    "hq": "San Francisco / London",
+    "size": "1,500\u20132,000",
+    "stage": "Pre-IPO",
+    "co_notes": "RevOps-native product; London GTM"
   },
   "HiBob": {
     "ats": "smartrecruiters",
     "token": "hibob",
     "jobs": 1,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "HR Tech (HRIS)",
+    "hq": "Tel Aviv / London",
+    "size": "1,000\u20131,400",
+    "stage": "Late",
+    "co_notes": "Fast-growing HRIS; London office"
   },
   "Lighthouse": {
     "ats": "greenhouse",
     "token": "lighthouse",
     "jobs": 53,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Hospitality data / SaaS",
+    "hq": "London (HQ)",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "Hotel commercial intelligence; strong domain + data fit"
   },
   "Matillion": {
     "ats": "lever",
     "token": "matillion",
     "jobs": 21,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Data integration / ETL",
+    "hq": "Manchester / New York",
+    "size": "500\u2013700",
+    "stage": "Late",
+    "co_notes": "UK-headquartered data SaaS"
   },
   "Personio": {
     "ats": "recruitee",
     "token": "personio",
     "jobs": 1,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "HR Tech (HRIS)",
+    "hq": "Munich / London",
+    "size": "1,800\u20132,200",
+    "stage": "Late",
+    "co_notes": "European HR SaaS leader"
   },
   "Pleo": {
     "ats": "ashby",
     "token": "pleo",
     "jobs": 36,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Spend management",
+    "hq": "Copenhagen / London",
+    "size": "900\u20131,200",
+    "stage": "Late"
   },
   "Quantexa": {
     "ats": "ashby",
     "token": "quantexa",
     "jobs": 22,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Data / AI (financial crime)",
+    "hq": "London (HQ)",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "London HQ; data-driven GTM"
   },
   "Remote": {
     "ats": "greenhouse",
     "token": "remote",
     "jobs": 2,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "HR / EOR",
+    "hq": "Remote-first",
+    "size": "1,500\u20132,000",
+    "stage": "Late",
+    "co_notes": "Fully distributed; RevOps critical"
   },
   "Synthesia": {
     "ats": "ashby",
     "token": "synthesia",
     "jobs": 80,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Video AI",
+    "hq": "London (HQ)",
+    "size": "400\u2013600",
+    "stage": "Late",
+    "co_notes": "London HQ, rapid GTM build-out"
   },
   "Aircall": {
     "ats": "lever",
@@ -116,7 +188,12 @@
     "token": "airwallex",
     "jobs": 576,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Business finance / FX",
+    "hq": "Melbourne / London",
+    "size": "1,500\u20132,000",
+    "stage": "Pre-IPO",
+    "co_notes": "London hub; EMEA expansion"
   },
   "Algolia": {
     "ats": "greenhouse",
@@ -130,14 +207,23 @@
     "token": "amplitude",
     "jobs": 55,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Product analytics",
+    "hq": "San Francisco / London",
+    "size": "700\u20131,000",
+    "stage": "Public"
   },
   "Atlan": {
     "ats": "ashby",
     "token": "atlan",
     "jobs": 5,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Data catalog",
+    "hq": "Singapore / London",
+    "size": "300\u2013500",
+    "stage": "Late",
+    "co_notes": "London presence"
   },
   "Beamery": {
     "ats": "ashby",
@@ -151,7 +237,12 @@
     "token": "braze",
     "jobs": 198,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Customer engagement",
+    "hq": "New York / London",
+    "size": "1,500\u20132,000",
+    "stage": "Public",
+    "co_notes": "London office; marketing-led GTM"
   },
   "Celonis": {
     "ats": "greenhouse",
@@ -200,7 +291,12 @@
     "token": "contentsquare",
     "jobs": 37,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Digital experience analytics",
+    "hq": "Paris / London",
+    "size": "1,500\u20132,000",
+    "stage": "Late",
+    "co_notes": "Paris HQ; London hub"
   },
   "Datadog": {
     "ats": "greenhouse",
@@ -235,7 +331,12 @@
     "token": "fivetran",
     "jobs": 129,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Data integration",
+    "hq": "Oakland / London",
+    "size": "1,200\u20131,600",
+    "stage": "Late",
+    "co_notes": "London office"
   },
   "Flagstone": {
     "ats": "greenhouse",
@@ -249,7 +350,12 @@
     "token": "form3",
     "jobs": 8,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Payment technology",
+    "hq": "London (HQ)",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "London HQ; fintech"
   },
   "GitLab": {
     "ats": "greenhouse",
@@ -263,21 +369,36 @@
     "token": "intercom",
     "jobs": 153,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Customer messaging",
+    "hq": "Dublin / London",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "Dublin HQ; London team"
   },
   "Iterable": {
     "ats": "greenhouse",
     "token": "iterable",
     "jobs": 32,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Marketing automation",
+    "hq": "San Francisco / London",
+    "size": "500\u2013700",
+    "stage": "Late",
+    "co_notes": "London office"
   },
   "Klaviyo": {
     "ats": "greenhouse",
     "token": "klaviyo",
     "jobs": 203,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Marketing automation",
+    "hq": "Boston / London",
+    "size": "1,500\u20132,000",
+    "stage": "Public",
+    "co_notes": "London office; marketing-led"
   },
   "Marshmallow": {
     "ats": "ashby",
@@ -298,7 +419,12 @@
     "token": "mixpanel",
     "jobs": 42,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Product analytics",
+    "hq": "San Francisco / London",
+    "size": "400\u2013600",
+    "stage": "Late",
+    "co_notes": "Analytics-native"
   },
   "MongoDB": {
     "ats": "greenhouse",
@@ -312,7 +438,12 @@
     "token": "monzo",
     "jobs": 61,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Neobank",
+    "hq": "London (HQ)",
+    "size": "2,000\u20132,500",
+    "stage": "Late",
+    "co_notes": "London HQ; UK challenger bank"
   },
   "Multiverse": {
     "ats": "ashby",
@@ -326,28 +457,46 @@
     "token": "nebius",
     "jobs": 338,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "AI cloud infrastructure",
+    "hq": "Amsterdam / London",
+    "size": "1,000\u20132,000",
+    "stage": "Growth (public)"
   },
   "Notion": {
     "ats": "ashby",
     "token": "notion",
     "jobs": 145,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Productivity / wiki",
+    "hq": "San Francisco",
+    "size": "500\u2013700",
+    "stage": "Late"
   },
   "OakNorth": {
     "ats": "ashby",
     "token": "oaknorth",
     "jobs": 1,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "SMB lending",
+    "hq": "London (HQ)",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "London HQ"
   },
   "Paddle": {
     "ats": "ashby",
     "token": "paddle",
     "jobs": 26,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Payments / Billing",
+    "hq": "London (HQ)",
+    "size": "300\u2013500",
+    "stage": "Late",
+    "co_notes": "London HQ"
   },
   "Payhawk": {
     "ats": "personio",
@@ -361,7 +510,11 @@
     "token": "pendo",
     "jobs": 37,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Product analytics",
+    "hq": "Raleigh / London",
+    "size": "700\u20131,000",
+    "stage": "Late"
   },
   "Pennylane": {
     "ats": "lever",
@@ -396,7 +549,11 @@
     "token": "sigmacomputing",
     "jobs": 67,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "BI",
+    "hq": "San Francisco",
+    "size": "300\u2013500",
+    "stage": "Late"
   },
   "SiteMinder": {
     "ats": "ashby",
@@ -424,21 +581,36 @@
     "token": "truelayer",
     "jobs": 10,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Open banking",
+    "hq": "London (HQ)",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "London HQ"
   },
   "Trustpilot": {
     "ats": "greenhouse",
     "token": "trustpilot",
     "jobs": 79,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Reviews / trust",
+    "hq": "Copenhagen / London",
+    "size": "900\u20131,200",
+    "stage": "Public",
+    "co_notes": "London office; public"
   },
   "Webflow": {
     "ats": "greenhouse",
     "token": "webflow",
     "jobs": 20,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "No-code web",
+    "hq": "San Francisco",
+    "size": "1,000\u20131,300",
+    "stage": "Late",
+    "co_notes": "Mostly US-based"
   },
   "Zego": {
     "ats": "workable",
@@ -452,14 +624,23 @@
     "token": "zilch",
     "jobs": 11,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "BNPL",
+    "hq": "London (HQ)",
+    "size": "300\u2013500",
+    "stage": "Growth",
+    "co_notes": "London HQ"
   },
   "Airtable": {
     "ats": "greenhouse",
     "token": "airtable",
     "jobs": 26,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "No-code database",
+    "hq": "San Francisco",
+    "size": "700\u20131,000",
+    "stage": "Late"
   },
   "Diligent": {
     "ats": "greenhouse",
@@ -473,7 +654,11 @@
     "token": "marqeta",
     "jobs": 42,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Card issuing / Fintech",
+    "hq": "Oakland / London",
+    "size": "800\u20131,000",
+    "stage": "Public"
   },
   "Permutive": {
     "ats": "ashby",
@@ -487,161 +672,265 @@
     "token": "spotify",
     "jobs": 171,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Audio / Media",
+    "hq": "Stockholm / London",
+    "size": "9,000+",
+    "stage": "Public"
   },
   "Twilio": {
     "ats": "greenhouse",
     "token": "twilio",
     "jobs": 142,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "CPaaS",
+    "hq": "San Francisco / London",
+    "size": "5,000+",
+    "stage": "Public"
   },
   "Wise": {
     "ats": "smartrecruiters",
     "token": "wise",
     "jobs": 100,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "FX / International payments",
+    "hq": "London (HQ)",
+    "size": "3,000\u20134,000",
+    "stage": "Public",
+    "co_notes": "London HQ"
   },
   "Xero": {
     "ats": "ashby",
     "token": "xero",
     "jobs": 94,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Accounting SaaS",
+    "hq": "New Zealand / London",
+    "size": "4,000\u20135,000",
+    "stage": "Public"
   },
   "Apollo.io": {
     "ats": "greenhouse",
     "token": "apolloio",
     "jobs": 45,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Sales intelligence",
+    "hq": "San Francisco / remote",
+    "size": "1,000\u20131,500",
+    "stage": "Late",
+    "co_notes": "Sales-led; RevOps-heavy"
   },
   "Cognism": {
     "ats": "greenhouse",
     "token": "cognism",
     "jobs": 17,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Sales intelligence",
+    "hq": "London (HQ)",
+    "size": "500\u2013700",
+    "stage": "Late",
+    "co_notes": "London HQ; GTM-native"
   },
   "6sense": {
     "ats": "greenhouse",
     "token": "6sense",
     "jobs": 33,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "ABM / Revenue AI",
+    "hq": "San Francisco / London",
+    "size": "1,500\u20132,000",
+    "stage": "Pre-IPO",
+    "co_notes": "RevOps-adjacent product"
   },
   "Vanta": {
     "ats": "ashby",
     "token": "vanta",
     "jobs": 132,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Trust & compliance",
+    "hq": "San Francisco / London",
+    "size": "500\u2013800",
+    "stage": "Late",
+    "co_notes": "Fast-growing; London expansion"
   },
   "Immersive Labs": {
     "ats": "greenhouse",
     "token": "immersive",
     "jobs": 16,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Cyber skills",
+    "hq": "Bristol / London",
+    "size": "400\u2013600",
+    "stage": "Late",
+    "co_notes": "UK HQ; strong GTM team"
   },
   "Grafana Labs": {
     "ats": "greenhouse",
     "token": "grafanalabs",
     "jobs": 138,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Observability / Open source",
+    "hq": "Remote-first / New York",
+    "size": "1,000\u20131,500",
+    "stage": "Late",
+    "co_notes": "Remote-first; fast growing"
   },
   "Vercel": {
     "ats": "greenhouse",
     "token": "vercel",
     "jobs": 74,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Frontend cloud",
+    "hq": "San Francisco / remote",
+    "size": "500\u2013800",
+    "stage": "Late"
   },
   "Hugging Face": {
     "ats": "workable",
     "token": "huggingface",
     "jobs": 9,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "AI / ML platform",
+    "hq": "New York / Paris",
+    "size": "400\u2013600",
+    "stage": "Late"
   },
   "Mistral AI": {
     "ats": "lever",
     "token": "mistral",
     "jobs": 169,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "LLM / AI",
+    "hq": "Paris",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "European AI leader; Paris HQ"
   },
   "Scale AI": {
     "ats": "greenhouse",
     "token": "scaleai",
     "jobs": 170,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "AI data",
+    "hq": "San Francisco",
+    "size": "1,000\u20131,500",
+    "stage": "Late"
   },
   "Glean": {
     "ats": "smartrecruiters",
     "token": "glean",
     "jobs": 1,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Enterprise search / AI",
+    "hq": "Palo Alto / London",
+    "size": "500\u2013800",
+    "stage": "Late",
+    "co_notes": "London expansion underway"
   },
   "Harvey": {
     "ats": "ashby",
     "token": "harvey",
     "jobs": 253,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Legal AI",
+    "hq": "San Francisco / London",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "London office; scaling GTM"
   },
   "Zip": {
     "ats": "ashby",
     "token": "zip",
     "jobs": 118,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Procurement orchestration",
+    "hq": "San Francisco",
+    "size": "300\u2013500",
+    "stage": "Late"
   },
   "PolyAI": {
     "ats": "greenhouse",
     "token": "polyai",
     "jobs": 11,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Conversational AI",
+    "hq": "London (HQ)",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "London HQ; fast-growing"
   },
   "Hyperexponential": {
     "ats": "ashby",
     "token": "hyperexponential",
     "jobs": 32,
     "source": "probe",
-    "tier": "A"
+    "tier": "A",
+    "sector": "Insurance pricing SaaS",
+    "hq": "London (HQ)",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "London HQ; niche but strong GTM"
   },
   "Salesloft": {
     "ats": "greenhouse",
     "token": "salesloft",
     "jobs": 31,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Sales engagement",
+    "hq": "Atlanta / London",
+    "size": "700\u20131,000",
+    "stage": "Late"
   },
   "Outreach": {
     "ats": "lever",
     "token": "outreach",
     "jobs": 33,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Sales engagement",
+    "hq": "Seattle / London",
+    "size": "1,000\u20131,300",
+    "stage": "Late"
   },
   "Highspot": {
     "ats": "lever",
     "token": "highspot",
     "jobs": 4,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Sales enablement",
+    "hq": "Seattle / London",
+    "size": "1,000\u20131,300",
+    "stage": "Late"
   },
   "Seismic": {
     "ats": "workable",
     "token": "seismic",
     "jobs": 2,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Sales enablement",
+    "hq": "San Diego / London",
+    "size": "1,500\u20132,000",
+    "stage": "Late"
   },
   "Demandbase": {
     "ats": "ashby",
@@ -655,21 +944,36 @@
     "token": "sumup",
     "jobs": 442,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "SMB payments",
+    "hq": "London (HQ)",
+    "size": "3,000\u20134,000",
+    "stage": "Late",
+    "co_notes": "London HQ; fintech scale-up"
   },
   "Primer": {
     "ats": "ashby",
     "token": "primer",
     "jobs": 15,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Payments orchestration",
+    "hq": "London (HQ)",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "London HQ; payments infra"
   },
   "Yapily": {
     "ats": "workable",
     "token": "yapily",
     "jobs": 10,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Open banking API",
+    "hq": "London (HQ)",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "London HQ"
   },
   "Griffin": {
     "ats": "ashby",
@@ -697,14 +1001,24 @@
     "token": "plaid",
     "jobs": 97,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Financial data API",
+    "hq": "San Francisco / London",
+    "size": "1,000\u20131,500",
+    "stage": "Late",
+    "co_notes": "London office"
   },
   "Stripe": {
     "ats": "greenhouse",
     "token": "stripe",
     "jobs": 476,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Payments",
+    "hq": "San Francisco / Dublin",
+    "size": "8,000+",
+    "stage": "Pre-IPO",
+    "co_notes": "Large GTM org; London hub"
   },
   "Lendable": {
     "ats": "ashby",
@@ -725,21 +1039,36 @@
     "token": "cultureamp",
     "jobs": 14,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Employee experience",
+    "hq": "Melbourne / London",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "London office"
   },
   "Lattice": {
     "ats": "greenhouse",
     "token": "lattice",
     "jobs": 12,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "People management",
+    "hq": "San Francisco / London",
+    "size": "500\u2013700",
+    "stage": "Late",
+    "co_notes": "London office"
   },
   "Leapsome": {
     "ats": "ashby",
     "token": "leapsome",
     "jobs": 17,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "People enablement",
+    "hq": "Berlin / London",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "Berlin HQ; London office"
   },
   "Drata": {
     "ats": "ashby",
@@ -753,7 +1082,12 @@
     "token": "orcasecurity",
     "jobs": 15,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Cloud security",
+    "hq": "Tel Aviv / London",
+    "size": "500\u2013700",
+    "stage": "Late",
+    "co_notes": "London presence"
   },
   "JFrog": {
     "ats": "greenhouse",
@@ -795,7 +1129,11 @@
     "token": "starburst",
     "jobs": 22,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Data mesh / analytics",
+    "hq": "Boston / remote",
+    "size": "500\u2013700",
+    "stage": "Late"
   },
   "Pinecone": {
     "ats": "ashby",
@@ -809,7 +1147,11 @@
     "token": "airbyte",
     "jobs": 9,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Data integration",
+    "hq": "San Francisco",
+    "size": "200\u2013400",
+    "stage": "Late"
   },
   "Astronomer": {
     "ats": "ashby",
@@ -830,21 +1172,36 @@
     "token": "pipedrive",
     "jobs": 26,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "CRM",
+    "hq": "Tallinn / London",
+    "size": "900\u20131,200",
+    "stage": "Late",
+    "co_notes": "Estonia HQ; London presence"
   },
   "ActiveCampaign": {
     "ats": "lever",
     "token": "activecampaign",
     "jobs": 24,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Marketing automation / CRM",
+    "hq": "Chicago / London",
+    "size": "1,000\u20131,500",
+    "stage": "Late",
+    "co_notes": "London office"
   },
   "Bloomreach": {
     "ats": "greenhouse",
     "token": "bloomreach",
     "jobs": 77,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "CDP / commerce",
+    "hq": "Mountain View / London",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "London office"
   },
   "Salsify": {
     "ats": "greenhouse",
@@ -893,7 +1250,11 @@
     "token": "clickup",
     "jobs": 65,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Productivity",
+    "hq": "San Diego",
+    "size": "1,000\u20131,500",
+    "stage": "Late"
   },
   "VTEX": {
     "ats": "greenhouse",
@@ -928,7 +1289,12 @@
     "token": "accurx",
     "jobs": 16,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Healthcare comms",
+    "hq": "London (HQ)",
+    "size": "400\u2013600",
+    "stage": "Growth",
+    "co_notes": "London HQ; NHS-focused"
   },
   "Feedzai": {
     "ats": "greenhouse",
@@ -963,21 +1329,34 @@
     "token": "ivalua",
     "jobs": 39,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Procurement",
+    "hq": "Redwood City / Paris",
+    "size": "800\u20131,000",
+    "stage": "Late"
   },
   "Workato": {
     "ats": "greenhouse",
     "token": "workato",
     "jobs": 178,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Integration platform",
+    "hq": "Mountain View / London",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "London presence"
   },
   "n8n": {
     "ats": "ashby",
     "token": "n8n",
     "jobs": 44,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Workflow automation",
+    "hq": "Berlin",
+    "size": "200\u2013400",
+    "stage": "Growth"
   },
   "Goodlord": {
     "ats": "ashby",
@@ -1033,7 +1412,12 @@
     "token": "fresha",
     "jobs": 147,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "Beauty / wellness SaaS",
+    "hq": "London (HQ)",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "London HQ; global expansion"
   },
   "Elliptic": {
     "ats": "ashby",
@@ -1054,7 +1438,11 @@
     "token": "bombora",
     "jobs": 1,
     "source": "probe",
-    "tier": "B"
+    "tier": "B",
+    "sector": "B2B intent data",
+    "hq": "New York",
+    "size": "300\u2013500",
+    "stage": "Late"
   },
   "Zscaler": {
     "ats": "greenhouse",
@@ -1075,14 +1463,24 @@
     "token": "zoominfo",
     "jobs": 58,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Go-to-market intelligence",
+    "hq": "Vancouver WA / London",
+    "size": "3,000\u20134,000",
+    "stage": "Public",
+    "co_notes": "London office"
   },
   "Adyen": {
     "ats": "greenhouse",
     "token": "adyen",
     "jobs": 215,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Payments",
+    "hq": "Amsterdam",
+    "size": "3,000\u20134,000",
+    "stage": "Public",
+    "co_notes": "Amsterdam HQ; London office"
   },
   "Trading 212": {
     "ats": "ashby",
@@ -1110,28 +1508,46 @@
     "token": "freshworks",
     "jobs": 27,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "CRM / Support",
+    "hq": "San Mateo / London",
+    "size": "5,000+",
+    "stage": "Public"
   },
   "Zuora": {
     "ats": "greenhouse",
     "token": "zuora",
     "jobs": 45,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Subscription management",
+    "hq": "Redwood City / London",
+    "size": "1,500\u20132,000",
+    "stage": "Public"
   },
   "Gainsight": {
     "ats": "ashby",
     "token": "gainsight",
     "jobs": 6,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Customer success",
+    "hq": "San Francisco / London",
+    "size": "1,000\u20131,500",
+    "stage": "Late",
+    "co_notes": "CS-led; London team"
   },
   "Planhat": {
     "ats": "ashby",
     "token": "planhat",
     "jobs": 1,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Customer success",
+    "hq": "Stockholm / London",
+    "size": "200\u2013400",
+    "stage": "Growth",
+    "co_notes": "Stockholm HQ; London presence"
   },
   "PagerDuty": {
     "ats": "greenhouse",
@@ -1166,14 +1582,22 @@
     "token": "asana",
     "jobs": 143,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Work management",
+    "hq": "San Francisco / London",
+    "size": "1,500\u20132,000",
+    "stage": "Public"
   },
   "Lightspeed": {
     "ats": "ashby",
     "token": "lightspeed",
     "jobs": 4,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "POS / Commerce",
+    "hq": "Montreal / Amsterdam",
+    "size": "3,000\u20134,000",
+    "stage": "Public"
   },
   "Shippeo": {
     "ats": "smartrecruiters",
@@ -1201,7 +1625,11 @@
     "token": "coupa",
     "jobs": 104,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Business spend",
+    "hq": "San Mateo / London",
+    "size": "2,000\u20132,500",
+    "stage": "Private (PE)"
   },
   "Lokalise": {
     "ats": "greenhouse",
@@ -1229,7 +1657,11 @@
     "token": "qualtrics",
     "jobs": 45,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Experience management",
+    "hq": "Provo / London",
+    "size": "5,000+",
+    "stage": "Private (PE)"
   },
   "LogRocket": {
     "ats": "lever",
@@ -1278,7 +1710,11 @@
     "token": "g2",
     "jobs": 25,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Software reviews",
+    "hq": "Chicago",
+    "size": "500\u2013700",
+    "stage": "Late"
   },
   "SurveyMonkey / Momentive": {
     "ats": "greenhouse",
@@ -1292,7 +1728,11 @@
     "token": "expensify",
     "jobs": 1,
     "source": "probe",
-    "tier": "C"
+    "tier": "C",
+    "sector": "Expense management",
+    "hq": "Portland",
+    "size": "200\u2013400",
+    "stage": "Public"
   },
   "Re-Leased": {
     "ats": "greenhouse",
@@ -1300,5 +1740,632 @@
     "jobs": 8,
     "source": "probe",
     "tier": "C"
+  },
+  "Showpad": {
+    "ats": "greenhouse",
+    "token": "showpad",
+    "jobs": 30,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Sales enablement",
+    "hq": "Ghent / Chicago",
+    "size": "500\u2013700",
+    "stage": "Late"
+  },
+  "Mindtickle": {
+    "ats": "lever",
+    "token": "mindtickle",
+    "jobs": 27,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Sales readiness",
+    "hq": "San Francisco",
+    "size": "500\u2013700",
+    "stage": "Late"
+  },
+  "Allego": {
+    "ats": "recruitee",
+    "token": "allego",
+    "jobs": 12,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Sales enablement",
+    "hq": "Needham / London",
+    "size": "300\u2013500",
+    "stage": "Late"
+  },
+  "Dialpad": {
+    "ats": "greenhouse",
+    "token": "dialpad",
+    "jobs": 85,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Cloud comms / AI",
+    "hq": "San Francisco / London",
+    "size": "1,000\u20131,500",
+    "stage": "Late"
+  },
+  "Vonage": {
+    "ats": "greenhouse",
+    "token": "vonage",
+    "jobs": 53,
+    "source": "probe",
+    "tier": "C",
+    "sector": "CPaaS",
+    "hq": "New Jersey / London",
+    "size": "2,500\u20133,000",
+    "stage": "Public (acquired)"
+  },
+  "Five9": {
+    "ats": "greenhouse",
+    "token": "five9",
+    "jobs": 166,
+    "source": "probe",
+    "tier": "C",
+    "sector": "CCaaS",
+    "hq": "San Ramon",
+    "size": "2,000\u20132,500",
+    "stage": "Public"
+  },
+  "NICE": {
+    "ats": "greenhouse",
+    "token": "nice",
+    "jobs": 353,
+    "source": "probe",
+    "tier": "C",
+    "sector": "CX / Analytics",
+    "hq": "Ra'anana / London",
+    "size": "8,000+",
+    "stage": "Public"
+  },
+  "Veeva Systems": {
+    "ats": "lever",
+    "token": "veeva",
+    "jobs": 1028,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Life sciences SaaS",
+    "hq": "Pleasanton / London",
+    "size": "6,000+",
+    "stage": "Public"
+  },
+  "Salesforce": {
+    "ats": "recruitee",
+    "token": "salesforce",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "C",
+    "sector": "CRM",
+    "hq": "San Francisco / London",
+    "size": "70,000+",
+    "stage": "Public"
+  },
+  "SugarCRM": {
+    "ats": "lever",
+    "token": "sugarcrm",
+    "jobs": 14,
+    "source": "probe",
+    "tier": "C",
+    "sector": "CRM",
+    "hq": "Atlanta",
+    "size": "500\u2013700",
+    "stage": "Late (PE)"
+  },
+  "Close": {
+    "ats": "ashby",
+    "token": "close",
+    "jobs": 7,
+    "source": "probe",
+    "tier": "C",
+    "sector": "CRM",
+    "hq": "Remote-first",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "Attio": {
+    "ats": "ashby",
+    "token": "attio",
+    "jobs": 30,
+    "source": "probe",
+    "tier": "B",
+    "sector": "CRM",
+    "hq": "London (HQ)",
+    "size": "100\u2013200",
+    "stage": "Growth",
+    "co_notes": "London HQ; modern CRM"
+  },
+  "Affinity": {
+    "ats": "greenhouse",
+    "token": "affinity",
+    "jobs": 20,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Relationship intelligence CRM",
+    "hq": "San Francisco",
+    "size": "200\u2013400",
+    "stage": "Late"
+  },
+  "Vitally": {
+    "ats": "ashby",
+    "token": "vitally",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Customer success",
+    "hq": "New York",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "UserIQ": {
+    "ats": "smartrecruiters",
+    "token": "useriq",
+    "jobs": 4,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Customer success",
+    "hq": "Atlanta",
+    "size": "50\u2013100",
+    "stage": "Growth"
+  },
+  "LeanData": {
+    "ats": "ashby",
+    "token": "leandata",
+    "jobs": 15,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Revenue ops / routing",
+    "hq": "Santa Clara",
+    "size": "200\u2013400",
+    "stage": "Late",
+    "co_notes": "RevOps tooling vendor"
+  },
+  "Reveal": {
+    "ats": "personio",
+    "token": "reveal",
+    "jobs": 2,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Partner ecosystem",
+    "hq": "Paris",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "Cleverbridge": {
+    "ats": "smartrecruiters",
+    "token": "cleverbridge",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Subscription / eCommerce",
+    "hq": "Cologne",
+    "size": "300\u2013500",
+    "stage": "Late"
+  },
+  "Mollie": {
+    "ats": "ashby",
+    "token": "mollie",
+    "jobs": 47,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Payments",
+    "hq": "Amsterdam / London",
+    "size": "700\u20131,000",
+    "stage": "Late",
+    "co_notes": "Amsterdam HQ; London office"
+  },
+  "Trustly": {
+    "ats": "lever",
+    "token": "trustly",
+    "jobs": 40,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Open banking payments",
+    "hq": "Stockholm / London",
+    "size": "700\u20131,000",
+    "stage": "Late"
+  },
+  "Numeral": {
+    "ats": "ashby",
+    "token": "numeral",
+    "jobs": 21,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Bank payments",
+    "hq": "Paris",
+    "size": "50\u2013100",
+    "stage": "Growth"
+  },
+  "Stytch": {
+    "ats": "ashby",
+    "token": "stytch",
+    "jobs": 5,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Auth / Identity",
+    "hq": "San Francisco",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "WorkOS": {
+    "ats": "ashby",
+    "token": "workos",
+    "jobs": 29,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Enterprise auth",
+    "hq": "San Francisco",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "Mindbody": {
+    "ats": "greenhouse",
+    "token": "mindbody",
+    "jobs": 34,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Wellness software",
+    "hq": "San Luis Obispo",
+    "size": "1,000\u20131,500",
+    "stage": "Late"
+  },
+  "Treatwell": {
+    "ats": "personio",
+    "token": "treatwell",
+    "jobs": 3,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Beauty marketplace",
+    "hq": "London (HQ)",
+    "size": "300\u2013500",
+    "stage": "Late",
+    "co_notes": "London HQ; marketplace model"
+  },
+  "Sift": {
+    "ats": "ashby",
+    "token": "sift",
+    "jobs": 10,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Fraud prevention",
+    "hq": "San Francisco",
+    "size": "500\u2013700",
+    "stage": "Late"
+  },
+  "Abnormal Security": {
+    "ats": "greenhouse",
+    "token": "abnormalsecurity",
+    "jobs": 87,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Email security",
+    "hq": "San Francisco / London",
+    "size": "500\u2013700",
+    "stage": "Late",
+    "co_notes": "London expansion"
+  },
+  "Semgrep": {
+    "ats": "ashby",
+    "token": "semgrep",
+    "jobs": 30,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Code security",
+    "hq": "San Francisco",
+    "size": "200\u2013400",
+    "stage": "Late"
+  },
+  "Socket": {
+    "ats": "greenhouse",
+    "token": "socket",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Supply chain security",
+    "hq": "San Francisco",
+    "size": "50\u2013100",
+    "stage": "Growth"
+  },
+  "Chainguard": {
+    "ats": "greenhouse",
+    "token": "chainguard",
+    "jobs": 62,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Supply chain security",
+    "hq": "Kirkland WA",
+    "size": "200\u2013400",
+    "stage": "Growth"
+  },
+  "Artefact": {
+    "ats": "greenhouse",
+    "token": "artefact",
+    "jobs": 134,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Data / AI consultancy",
+    "hq": "Paris / London",
+    "size": "1,500\u20132,000",
+    "stage": "Growth",
+    "co_notes": "Paris HQ; London office"
+  },
+  "Quantium": {
+    "ats": "greenhouse",
+    "token": "quantium",
+    "jobs": 32,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Data analytics",
+    "hq": "Sydney / London",
+    "size": "1,500\u20132,000",
+    "stage": "Late"
+  },
+  "Yellowbrick Data": {
+    "ats": "greenhouse",
+    "token": "yellowbrickdata",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Data warehouse",
+    "hq": "Mountain View",
+    "size": "200\u2013400",
+    "stage": "Late"
+  },
+  "Collibra": {
+    "ats": "greenhouse",
+    "token": "collibra",
+    "jobs": 45,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Data governance",
+    "hq": "Brussels / New York",
+    "size": "1,000\u20131,500",
+    "stage": "Late",
+    "co_notes": "European HQ"
+  },
+  "Securiti": {
+    "ats": "smartrecruiters",
+    "token": "securiti",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Data security / privacy",
+    "hq": "San Jose",
+    "size": "500\u2013700",
+    "stage": "Late"
+  },
+  "Aha!": {
+    "ats": "greenhouse",
+    "token": "aha",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Product management",
+    "hq": "Remote-first",
+    "size": "200\u2013400",
+    "stage": "Late"
+  },
+  "Smartsheet": {
+    "ats": "greenhouse",
+    "token": "smartsheet",
+    "jobs": 118,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Work management",
+    "hq": "Bellevue / London",
+    "size": "3,000\u20134,000",
+    "stage": "Public"
+  },
+  "Linear": {
+    "ats": "ashby",
+    "token": "linear",
+    "jobs": 25,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Project management",
+    "hq": "San Francisco",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "Glide": {
+    "ats": "greenhouse",
+    "token": "glide",
+    "jobs": 2,
+    "source": "probe",
+    "tier": "B",
+    "sector": "No-code apps",
+    "hq": "Remote-first",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "Stacker": {
+    "ats": "ashby",
+    "token": "stacker",
+    "jobs": 1,
+    "source": "probe",
+    "tier": "C",
+    "sector": "No-code apps",
+    "hq": "London (HQ)",
+    "size": "50\u2013100",
+    "stage": "Growth",
+    "co_notes": "London HQ"
+  },
+  "Bubble": {
+    "ats": "ashby",
+    "token": "bubble",
+    "jobs": 15,
+    "source": "probe",
+    "tier": "B",
+    "sector": "No-code dev",
+    "hq": "New York",
+    "size": "200\u2013400",
+    "stage": "Late"
+  },
+  "Zapier": {
+    "ats": "ashby",
+    "token": "zapier",
+    "jobs": 24,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Automation",
+    "hq": "Remote-first",
+    "size": "700\u20131,000",
+    "stage": "Late"
+  },
+  "Make (Integromat)": {
+    "ats": "greenhouse",
+    "token": "make",
+    "jobs": 13,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Automation",
+    "hq": "Prague",
+    "size": "300\u2013500",
+    "stage": "Late"
+  },
+  "Celigo": {
+    "ats": "greenhouse",
+    "token": "celigo",
+    "jobs": 26,
+    "source": "probe",
+    "tier": "B",
+    "sector": "iPaaS",
+    "hq": "Pleasanton",
+    "size": "300\u2013500",
+    "stage": "Late"
+  },
+  "Customer.io": {
+    "ats": "greenhouse",
+    "token": "customerio",
+    "jobs": 16,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Marketing automation",
+    "hq": "Remote-first",
+    "size": "300\u2013500",
+    "stage": "Late"
+  },
+  "Postscript": {
+    "ats": "greenhouse",
+    "token": "postscript",
+    "jobs": 6,
+    "source": "probe",
+    "tier": "B",
+    "sector": "SMS marketing",
+    "hq": "Remote-first",
+    "size": "200\u2013400",
+    "stage": "Late"
+  },
+  "Attentive": {
+    "ats": "greenhouse",
+    "token": "attentive",
+    "jobs": 50,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Mobile marketing",
+    "hq": "New York / London",
+    "size": "1,000\u20131,500",
+    "stage": "Late",
+    "co_notes": "London office"
+  },
+  "Yotpo": {
+    "ats": "greenhouse",
+    "token": "yotpo",
+    "jobs": 27,
+    "source": "probe",
+    "tier": "B",
+    "sector": "E-commerce marketing",
+    "hq": "New York / Tel Aviv",
+    "size": "500\u2013700",
+    "stage": "Late"
+  },
+  "Bazaarvoice": {
+    "ats": "lever",
+    "token": "bazaarvoice",
+    "jobs": 32,
+    "source": "probe",
+    "tier": "C",
+    "sector": "UGC / Reviews",
+    "hq": "Austin / London",
+    "size": "700\u20131,000",
+    "stage": "Late (PE)",
+    "co_notes": "London office"
+  },
+  "Clay": {
+    "ats": "recruitee",
+    "token": "clay",
+    "jobs": 14,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Data enrichment / GTM",
+    "hq": "New York",
+    "size": "100\u2013200",
+    "stage": "Growth",
+    "co_notes": "Emerging GTM tool"
+  },
+  "Common Room": {
+    "ats": "ashby",
+    "token": "commonroom",
+    "jobs": 12,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Community-led growth",
+    "hq": "Seattle",
+    "size": "100\u2013200",
+    "stage": "Growth"
+  },
+  "Orbit": {
+    "ats": "ashby",
+    "token": "orbit",
+    "jobs": 2,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Community / DevRel",
+    "hq": "Remote-first",
+    "size": "50\u2013100",
+    "stage": "Growth"
+  },
+  "Oyster HR": {
+    "ats": "ashby",
+    "token": "oyster",
+    "jobs": 9,
+    "source": "probe",
+    "tier": "B",
+    "sector": "EOR / global hiring",
+    "hq": "Remote-first",
+    "size": "500\u2013700",
+    "stage": "Late"
+  },
+  "Velocity Global": {
+    "ats": "ashby",
+    "token": "velocity",
+    "jobs": 4,
+    "source": "probe",
+    "tier": "B",
+    "sector": "EOR",
+    "hq": "Denver",
+    "size": "700\u20131,000",
+    "stage": "Late"
+  },
+  "BambooHR": {
+    "ats": "recruitee",
+    "token": "bamboohr",
+    "jobs": 2,
+    "source": "probe",
+    "tier": "C",
+    "sector": "HRIS",
+    "hq": "Lindon UT",
+    "size": "1,000\u20131,500",
+    "stage": "Late"
+  },
+  "NuBank": {
+    "ats": "ashby",
+    "token": "nubank",
+    "jobs": 110,
+    "source": "probe",
+    "tier": "C",
+    "sector": "Neobank",
+    "hq": "S\u00e3o Paulo / London",
+    "size": "7,000+",
+    "stage": "Public"
   }
 }
