@@ -29,9 +29,9 @@ export default function RoleTable({ jobs, applications, statuses, onStatusChange
                 <td style={{ whiteSpace: 'nowrap' }}>
                   {job.is_new && <span className="new-badge">New</span>}
                 </td>
-                <td title={[job.hq, job.size, job.co_notes].filter(Boolean).join(' · ') || undefined}>
+                <td title={[job.size, job.co_notes].filter(Boolean).join(' · ') || undefined}>
                   <div style={{ fontWeight: 600 }}>{job.company}</div>
-                  <div className="company-tier">{job.company_tier}{job.hq ? ` · ${job.hq}` : ''}</div>
+                  <div className="company-tier">{job.company_tier}</div>
                 </td>
                 <td>
                   <a href={job.url} target="_blank" rel="noopener noreferrer">
@@ -44,7 +44,13 @@ export default function RoleTable({ jobs, applications, statuses, onStatusChange
                 <td style={{ fontSize: 12, color: '#555', whiteSpace: 'nowrap' }}>{job.sector || '—'}</td>
                 <td style={{ fontSize: 12, whiteSpace: 'nowrap' }}>{job.stage || '—'}</td>
                 <td>{job.seniority || '—'}</td>
-                <td>{job.location || <em style={{ color: '#aaa' }}>unknown</em>}</td>
+                <td>
+                  {job.location
+                    ? job.location
+                    : job.hq
+                      ? <em style={{ color: '#aaa' }}>unknown · HQ: {job.hq}</em>
+                      : <em style={{ color: '#aaa' }}>unknown</em>}
+                </td>
                 <td style={{ whiteSpace: 'nowrap' }}>{job.posted ? job.posted.slice(0, 10) : '—'}</td>
                 <td>
                   <select
