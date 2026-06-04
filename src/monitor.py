@@ -33,9 +33,12 @@ def gather():
         print("No data/resolved.json - running discovery first.")
         discover_mod.run()
     resolved = json.loads(resolved_path.read_text())
+    known = {c["name"] for c in _load_yaml(ROOT / "config" / "companies.yaml")["companies"]}
 
     matches = []
     for name, r in resolved.items():
+        if name not in known:
+            continue
         if not r.get("token"):
             continue
         extra = {k: r[k] for k in ("sector", "hq", "size", "stage", "co_notes") if r.get(k)}
