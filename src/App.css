@@ -43,14 +43,14 @@ body {
   margin-bottom: 14px;
 }
 .filter-bar select,
-.filter-bar input {
+.filter-bar input[type="text"] {
   padding: 6px 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 13px;
   background: #fff;
 }
-.filter-bar input { width: 200px; }
+.filter-bar input[type="text"] { width: 200px; }
 .count { font-size: 13px; color: #666; margin-left: auto; }
 
 .role-table-wrap { overflow-x: auto; }
@@ -128,6 +128,27 @@ a:hover { text-decoration: underline; }
   background: transparent;
 }
 .notes-input:focus { outline: none; border-color: #93c5fd; background: #fff; }
+
+.new-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  background: #fef08a;
+  color: #713f12;
+  border: 1px solid #fde047;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.new-filter {
+  font-size: 13px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
 
 .loading { padding: 24px; color: #666; }
 

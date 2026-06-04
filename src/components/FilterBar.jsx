@@ -19,6 +19,10 @@ export default function FilterBar({ tiers, statuses, filters, onChange, total, s
         <option value="">All statuses</option>
         {statuses.map(s => <option key={s} value={s}>{s}</option>)}
       </select>
+      <label className="new-filter">
+        <input type="checkbox" checked={filters.newOnly || false} onChange={e => set('newOnly', e.target.checked)} />
+        {' '}New only
+      </label>
       <span className="count">{shown} / {total} roles</span>
     </div>
   )

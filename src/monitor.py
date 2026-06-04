@@ -76,6 +76,8 @@ def diff_state(matches):
 def write_digest(matches, new):
     DATA.mkdir(exist_ok=True); DOCS.mkdir(exist_ok=True)
     new_ids = {m["id"] for m in new}
+    for m in matches:
+        m["is_new"] = m["id"] in new_ids
     (DATA / "digest.json").write_text(json.dumps(
         {"generated": NOW.isoformat(), "total": len(matches), "new": len(new), "matches": matches}, indent=2))
 

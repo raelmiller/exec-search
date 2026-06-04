@@ -6,6 +6,7 @@ export default function RoleTable({ jobs, applications, statuses, onStatusChange
       <table>
         <thead>
           <tr>
+            <th></th>
             <th>Company</th>
             <th>Role</th>
             <th>Tier</th>
@@ -23,6 +24,9 @@ export default function RoleTable({ jobs, applications, statuses, onStatusChange
             const tierClass = 'tier-' + (job.role_tier || '').replace(/[/ ]+/g, '-')
             return (
               <tr key={job.id}>
+                <td style={{ whiteSpace: 'nowrap' }}>
+                  {job.is_new && <span className="new-badge">New</span>}
+                </td>
                 <td>
                   <div style={{ fontWeight: 600 }}>{job.company}</div>
                   <div className="company-tier">{job.company_tier}</div>
