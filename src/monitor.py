@@ -38,7 +38,8 @@ def gather():
     for name, r in resolved.items():
         if not r.get("token"):
             continue
-        jobs = ats_mod.fetch(r["ats"], r["token"], company=name, company_tier=r.get("tier", ""))
+        extra = {k: r[k] for k in ("sector", "hq", "size", "stage", "co_notes") if r.get(k)}
+        jobs = ats_mod.fetch(r["ats"], r["token"], company=name, company_tier=r.get("tier", ""), extra=extra)
         for j in jobs:
             ok, info = filt.classify(j, roles)
             if ok:
