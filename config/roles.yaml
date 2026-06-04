@@ -66,7 +66,6 @@ seniority:
 
 # A job passes location if its location text contains any include term. Jobs with
 # a blank location are kept and tagged "location unknown" (many remote roles are).
-# Location exclude terms take precedence over include terms.
 locations:
   include:
     - "london"
@@ -80,6 +79,10 @@ locations:
     - "united states"
     - ", us"
     - "(us)"
+    - "us -"
+    - "us,"
+    - " us "
+    - "u.s."
     - "usa"
     - "new york"
     - "san francisco"
@@ -93,3 +96,15 @@ locations:
     - "atlanta"
     - "toronto"
     - "canada"
+    - "british columbia"
+    - "ontario"
+    - "quebec"
+    - "alberta"
+    - "can:"
+    - "australia"
+    - "sydney"
+    - "melbourne"
+    - "singapore"
+    - "india"
+    - "bangalore"
+    - "mumbai"
