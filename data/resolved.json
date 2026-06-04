@@ -2367,5 +2367,16 @@
     "hq": "S\u00e3o Paulo / London",
     "size": "7,000+",
     "stage": "Public"
+  },
+  "Immuta": {
+    "ats": "lever",
+    "token": "immuta",
+    "jobs": 6,
+    "source": "probe",
+    "tier": "B",
+    "sector": "Data security",
+    "hq": "Boston",
+    "size": "300\u2013500",
+    "stage": "Late"
   }
 }
