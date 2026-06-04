@@ -1042,13 +1042,6 @@ companies:
   hq: New York / Tel Aviv
   size: 1,500–2,000
   stage: Late
-- name: Snyk
-  tier: A
-  sector: DevSecOps
-  hq: London + Boston
-  size: 1,000–1,300
-  stage: Late
-  co_notes: Strong London GTM, data-rich
 - name: Semgrep
   tier: B
   sector: Code security
@@ -1188,19 +1181,6 @@ companies:
   size: 200–400
   stage: Late
   co_notes: London HQ
-- name: Mixpanel
-  tier: B
-  sector: Product analytics
-  hq: San Francisco / London
-  size: 400–600
-  stage: Late
-  co_notes: Analytics-native
-- name: Heap
-  tier: B
-  sector: Product analytics
-  hq: San Francisco
-  size: 300–500
-  stage: Late
 - name: Productboard
   tier: B
   sector: Product management
@@ -1577,20 +1557,6 @@ companies:
   size: 700–1,000
   stage: Late
   co_notes: London office
-- name: Deel
-  tier: A
-  sector: HR / Payroll (EOR)
-  hq: Remote-first
-  size: 4,000–5,000
-  stage: Pre-IPO
-  co_notes: Huge sales org; remote-friendly
-- name: Remote
-  tier: A
-  sector: HR / EOR
-  hq: Remote-first
-  size: 1,500–2,000
-  stage: Late
-  co_notes: Fully distributed; RevOps critical
 - name: Oyster HR
   tier: B
   sector: EOR / global hiring
@@ -1764,17 +1730,10 @@ companies:
   hq: Lehi UT
   size: 500–700
   stage: Late
-- name: Thought Machine
-  tier: B
-  sector: Core banking SaaS
-  hq: London (HQ)
-  size: 500–700
-  stage: Late
-  co_notes: London HQ; banking infra
 - name: NuBank
   tier: C
   sector: Neobank
-  hq: São Paulo / London
+  hq: "São Paulo / London"
   size: 7,000+
   stage: Public
 - name: Monzo
