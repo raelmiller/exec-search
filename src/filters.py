@@ -65,6 +65,13 @@ def classify(job, cfg):
         ]
         if any(t in title for t in title_geo_terms):
             return False, {"reason": f"title geo-signal excluded ({job['title']})"}
+
+    # For blank or bare "remote" location, fall back to company HQ geo-check
+    if (not loc or loc.strip() == "remote") and exc_loc:
+        hq = _lc(job.get("hq", ""))
+        if hq and any(k in hq for k in exc_loc):
+            return False, {"reason": f"HQ geo-excluded ({job.get('hq', '')})"}
+
     loc_note = "location unknown" if not loc else ""
 
     return True, {
