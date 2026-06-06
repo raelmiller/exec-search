@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-05T11:02:21.716207+00:00",
-  "total": 7,
-  "new": 0,
+  "generated": "2026-06-06T09:39:36.857546+00:00",
+  "total": 8,
+  "new": 1,
   "matches": [
     {
       "company": "Pleo",
@@ -43,6 +43,27 @@
       "seniority": "manager",
       "loc_note": "",
       "is_new": false
+    },
+    {
+      "company": "Paddle",
+      "company_tier": "B",
+      "ats": "ashby",
+      "id": "Paddle:ashby:237536a7-879c-4b05-b368-53904d13ddaf",
+      "title": "VP of Revenue Operations",
+      "location": "",
+      "url": "https://jobs.ashbyhq.com/paddle/237536a7-879c-4b05-b368-53904d13ddaf",
+      "department": "",
+      "posted": "",
+      "sector": "Payments / Billing",
+      "hq": "London (HQ)",
+      "size": "300\u2013500",
+      "stage": "Late",
+      "co_notes": "London HQ",
+      "role_tier": "RevOps",
+      "role_priority": 1,
+      "seniority": "unspecified",
+      "loc_note": "location unknown",
+      "is_new": true
     },
     {
       "company": "Showpad",
