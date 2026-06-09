@@ -23,6 +23,10 @@ export default function FilterBar({ tiers, statuses, filters, onChange, total, s
         <input type="checkbox" checked={filters.newOnly || false} onChange={e => set('newOnly', e.target.checked)} />
         {' '}New only
       </label>
+      <label className="new-filter">
+        <input type="checkbox" checked={filters.hideArchived !== false} onChange={e => set('hideArchived', e.target.checked)} />
+        {' '}Hide closed/rejected
+      </label>
       <span className="count">{shown} / {total} roles</span>
     </div>
   )
