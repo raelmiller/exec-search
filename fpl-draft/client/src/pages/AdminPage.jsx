@@ -134,8 +134,20 @@ function PlayerSearch({ players, onSelect }) {
 
 // ─── Auction Controls ─────────────────────────────────────────────────────────
 function AuctionControls({ auction, teams, emit }) {
+  const [typedBid, setTypedBid] = useState('');
+
   if (!auction) return null;
   const { player, currentBid, leadingTeamId } = auction;
+
+  const applyTypedBid = () => {
+    const val = parseFloat(typedBid);
+    if (!isNaN(val) && val >= 0.25) {
+      // Round to nearest 0.25
+      const rounded = Math.round(val / 0.25) * 0.25;
+      emit('setBid', rounded);
+      setTypedBid('');
+    }
+  };
 
   return (
     <div className="card border-fpl-green/50 border-2 space-y-4">
@@ -172,6 +184,27 @@ function AuctionControls({ auction, teams, emit }) {
           onClick={() => emit('adjustBid', 0.25)}
         >
           +£0.25
+        </button>
+      </div>
+
+      {/* Typed bid input */}
+      <div className="flex gap-2">
+        <input
+          type="number"
+          inputMode="decimal"
+          step="0.25"
+          min="0.25"
+          className="input-field flex-1"
+          placeholder="Type bid (e.g. 8.50)"
+          value={typedBid}
+          onChange={(e) => setTypedBid(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && applyTypedBid()}
+        />
+        <button
+          className="bg-white/10 border border-white/20 text-white font-bold px-4 rounded-xl hover:bg-white/20 active:scale-95 transition-all touch-manipulation"
+          onClick={applyTypedBid}
+        >
+          Set
         </button>
       </div>
 
