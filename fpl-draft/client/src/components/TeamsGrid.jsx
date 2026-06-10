@@ -71,10 +71,7 @@ function TeamModal({ team, onClose }) {
                         >
                           {pos}
                         </span>
-                        <div>
-                          <p className="text-white font-semibold text-sm">{player.web_name}</p>
-                          <p className="text-white/40 text-xs">{player.team_name}</p>
-                        </div>
+                        <p className="text-white font-semibold text-sm">{player.playerName}</p>
                       </div>
                       <span className="text-fpl-green font-black text-sm">
                         £{player.price.toFixed(2)}m

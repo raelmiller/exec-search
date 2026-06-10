@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import CurrentAuction from '../components/CurrentAuction.jsx';
 import SoldPlayers from '../components/SoldPlayers.jsx';
 
-const ADMIN_PIN = 'fpl2025';
+const ADMIN_PIN = '2025';
 
 const POSITION_COLOURS = {
   GK: 'bg-yellow-500 text-black',
