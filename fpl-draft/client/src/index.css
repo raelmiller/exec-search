@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-fpl-purple text-white font-sans;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-green {
+    @apply bg-fpl-green text-fpl-purple font-bold py-3 px-6 rounded-xl active:scale-95 transition-all touch-manipulation select-none;
+  }
+  .btn-red {
+    @apply bg-red-500 text-white font-bold py-3 px-6 rounded-xl active:scale-95 transition-all touch-manipulation select-none;
+  }
+  .btn-secondary {
+    @apply bg-fpl-purple-light text-white font-semibold py-3 px-6 rounded-xl border border-white/20 active:scale-95 transition-all touch-manipulation select-none;
+  }
+  .card {
+    @apply bg-fpl-purple-light rounded-2xl p-4 border border-white/10;
+  }
+  .input-field {
+    @apply bg-fpl-purple-dark border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-fpl-green w-full;
+  }
+}
+
+/* Auction pulse glow */
+.auction-active {
+  animation: auction-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes auction-glow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 135, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 255, 135, 0.8), 0 0 60px rgba(0, 255, 135, 0.3);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
