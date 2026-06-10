@@ -16,6 +16,15 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
+// Serve built React client
+const path = require('path');
+const clientDist = path.join(__dirname, '../client/dist');
+app.use(express.static(clientDist));
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api') || req.path.startsWith('/socket.io')) return next();
+  res.sendFile(path.join(clientDist, 'index.html'));
+});
+
 // ── Constants ──────────────────────────────────────────────────────────────
 const NUM_TEAMS = 16;
 const INITIAL_BUDGET = 50;
@@ -214,7 +223,7 @@ app.get('/api/players', (req, res) => {
 });
 
 // ── Start ─────────────────────────────────────────────────────────────────
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 server.listen(PORT, '0.0.0.0', async () => {
   console.log(`FPL Draft server running on http://0.0.0.0:${PORT}`);
   await fetchPlayers();
