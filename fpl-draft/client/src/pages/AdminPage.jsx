@@ -551,14 +551,14 @@ export default function AdminPage({ gameState, players, connected, emit }) {
           </section>
         )}
 
-        {/* Team Management */}
-        <section>
-          <TeamManagement teams={teams} emit={emit} />
-        </section>
-
         {/* Countdown Clock */}
         <section>
           <ClockControls clock={clock} emit={emit} />
+        </section>
+
+        {/* Team Management */}
+        <section>
+          <TeamManagement teams={teams} emit={emit} />
         </section>
 
         {/* Sold Players */}
