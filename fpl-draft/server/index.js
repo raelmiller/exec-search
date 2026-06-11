@@ -45,9 +45,23 @@ function createInitialTeams() {
 
 let gameState = {
   teams: createInitialTeams(),
-  currentAuction: null, // { player, currentBid, leadingTeamId }
-  soldPlayers: [], // { player, teamId, teamName, price }
+  currentAuction: null,
+  soldPlayers: [],
+  clock: { duration: 60, remaining: 60, running: false },
 };
+
+let clockInterval = null;
+
+function tickClock() {
+  if (gameState.clock.remaining <= 0) {
+    gameState.clock.running = false;
+    clearInterval(clockInterval);
+    clockInterval = null;
+  } else {
+    gameState.clock.remaining -= 1;
+  }
+  broadcastState();
+}
 
 // ── FPL API ────────────────────────────────────────────────────────────────
 async function fetchPlayers() {
@@ -210,12 +224,46 @@ io.on('connection', (socket) => {
     }
   });
 
+  // ── clock controls ────────────────────────────────────────────────────
+  socket.on('clockSet', (seconds) => {
+    const s = Math.max(5, Math.round(seconds));
+    clearInterval(clockInterval);
+    clockInterval = null;
+    gameState.clock = { duration: s, remaining: s, running: false };
+    broadcastState();
+  });
+
+  socket.on('clockStart', () => {
+    if (gameState.clock.running || gameState.clock.remaining <= 0) return;
+    gameState.clock.running = true;
+    clockInterval = setInterval(tickClock, 1000);
+    broadcastState();
+  });
+
+  socket.on('clockPause', () => {
+    gameState.clock.running = false;
+    clearInterval(clockInterval);
+    clockInterval = null;
+    broadcastState();
+  });
+
+  socket.on('clockReset', () => {
+    gameState.clock.running = false;
+    clearInterval(clockInterval);
+    clockInterval = null;
+    gameState.clock.remaining = gameState.clock.duration;
+    broadcastState();
+  });
+
   // ── resetGame ─────────────────────────────────────────────────────────
   socket.on('resetGame', () => {
+    clearInterval(clockInterval);
+    clockInterval = null;
     gameState = {
       teams: createInitialTeams(),
       currentAuction: null,
       soldPlayers: [],
+      clock: { duration: 60, remaining: 60, running: false },
     };
     broadcastState();
   });

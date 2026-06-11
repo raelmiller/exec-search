@@ -2,9 +2,10 @@ import React from 'react';
 import CurrentAuction from '../components/CurrentAuction';
 import TeamsGrid from '../components/TeamsGrid';
 import SoldPlayers from '../components/SoldPlayers';
+import { ClockDisplay } from '../components/CountdownClock';
 
 export default function ViewerPage({ gameState, connected }) {
-  const { teams, currentAuction, soldPlayers } = gameState;
+  const { teams, currentAuction, soldPlayers, clock } = gameState;
 
   return (
     <div className="min-h-screen bg-fpl-purple">
@@ -37,6 +38,13 @@ export default function ViewerPage({ gameState, connected }) {
           </h2>
           <CurrentAuction currentAuction={currentAuction} teams={teams} />
         </section>
+
+        {/* Clock */}
+        {clock && (
+          <section>
+            <ClockDisplay clock={clock} />
+          </section>
+        )}
 
         {/* Teams Grid */}
         <section>

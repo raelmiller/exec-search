@@ -1,6 +1,37 @@
 import React, { useState, useMemo } from 'react';
 import CurrentAuction from '../components/CurrentAuction.jsx';
 import SoldPlayers from '../components/SoldPlayers.jsx';
+import { ClockControls } from '../components/CountdownClock.jsx';
+import * as XLSX from 'xlsx';
+
+function exportToExcel(soldPlayers, teams) {
+  // Sheet 1: Sold players
+  const soldRows = soldPlayers.map((s) => ({
+    Player: s.player.web_name,
+    Position: s.player.position,
+    Club: s.player.team_name,
+    'Bought By': s.teamName,
+    'Price (£m)': s.price,
+  }));
+
+  // Sheet 2: Team summaries
+  const teamRows = teams.flatMap((t) =>
+    t.squad.length === 0
+      ? [{ Team: t.name, Player: '—', Position: '—', 'Price (£m)': '—', 'Budget Remaining (£m)': t.budget }]
+      : t.squad.map((p, i) => ({
+          Team: i === 0 ? t.name : '',
+          Player: p.playerName,
+          Position: p.position,
+          'Price (£m)': p.price,
+          'Budget Remaining (£m)': i === 0 ? t.budget : '',
+        }))
+  );
+
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(soldRows), 'All Sales');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(teamRows), 'By Team');
+  XLSX.writeFile(wb, 'fpl-draft-results.xlsx');
+}
 
 const ADMIN_PIN = '2025';
 
@@ -431,7 +462,7 @@ export default function AdminPage({ gameState, players, connected, emit }) {
     return <PinScreen onUnlock={() => setUnlocked(true)} />;
   }
 
-  const { teams, currentAuction, soldPlayers } = gameState;
+  const { teams, currentAuction, soldPlayers, clock } = gameState;
 
   return (
     <div className="min-h-screen bg-fpl-purple">
@@ -525,10 +556,27 @@ export default function AdminPage({ gameState, players, connected, emit }) {
           <TeamManagement teams={teams} emit={emit} />
         </section>
 
+        {/* Countdown Clock */}
+        <section>
+          <ClockControls clock={clock} emit={emit} />
+        </section>
+
         {/* Sold Players */}
         <section>
           <SoldPlayers soldPlayers={soldPlayers} />
         </section>
+
+        {/* Export */}
+        {soldPlayers.length > 0 && (
+          <section className="pb-8">
+            <button
+              className="w-full btn-green py-4 text-lg"
+              onClick={() => exportToExcel(soldPlayers, teams)}
+            >
+              Export to Excel
+            </button>
+          </section>
+        )}
       </main>
     </div>
   );
