@@ -119,6 +119,24 @@ io.on('connection', (socket) => {
     broadcastState();
   });
 
+  // ── startCustomAuction ───────────────────────────────────────────────
+  socket.on('startCustomAuction', ({ name, position, club }) => {
+    if (gameState.currentAuction) return;
+    gameState.currentAuction = {
+      player: {
+        id: `custom_${Date.now()}`,
+        web_name: name,
+        first_name: '',
+        second_name: '',
+        position,
+        team_name: club || '—',
+      },
+      currentBid: 0.25,
+      leadingTeamId: null,
+    };
+    broadcastState();
+  });
+
   // ── setBid ────────────────────────────────────────────────────────────
   socket.on('setBid', (amount) => {
     if (!gameState.currentAuction) return;

@@ -69,8 +69,12 @@ function PinScreen({ onUnlock }) {
 }
 
 // ─── Player Search Panel ──────────────────────────────────────────────────────
-function PlayerSearch({ players, onSelect }) {
+function PlayerSearch({ players, onSelect, onSelectCustom }) {
   const [query, setQuery] = useState('');
+  const [showCustom, setShowCustom] = useState(false);
+  const [customName, setCustomName] = useState('');
+  const [customPos, setCustomPos] = useState('FWD');
+  const [customClub, setCustomClub] = useState('');
 
   const filtered = useMemo(() => {
     if (!query.trim()) return [];
@@ -85,48 +89,112 @@ function PlayerSearch({ players, onSelect }) {
       .slice(0, 20);
   }, [query, players]);
 
+  const submitCustom = () => {
+    if (!customName.trim()) return;
+    onSelectCustom({ name: customName.trim(), position: customPos, club: customClub.trim() || '—' });
+    setCustomName('');
+    setCustomClub('');
+    setShowCustom(false);
+  };
+
   return (
     <div>
       <h3 className="text-sm font-bold text-white/50 uppercase tracking-widest mb-2">
         Start Auction — Search Player
       </h3>
-      <input
-        type="text"
-        className="input-field mb-2"
-        placeholder="Search by name..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      {filtered.length > 0 && (
-        <div className="space-y-1.5 max-h-64 overflow-y-auto">
-          {filtered.map((p) => (
-            <button
-              key={p.id}
-              className="w-full flex items-center gap-3 bg-fpl-purple-dark hover:bg-fpl-purple-light border border-white/10 rounded-xl px-3 py-2.5 text-left transition-colors active:scale-98 touch-manipulation"
-              onClick={() => {
-                onSelect(p.id);
-                setQuery('');
-              }}
+
+      {!showCustom ? (
+        <>
+          <input
+            type="text"
+            className="input-field mb-2"
+            placeholder="Search by name..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          {filtered.length > 0 && (
+            <div className="space-y-1.5 max-h-64 overflow-y-auto">
+              {filtered.map((p) => (
+                <button
+                  key={p.id}
+                  className="w-full flex items-center gap-3 bg-fpl-purple-dark hover:bg-fpl-purple-light border border-white/10 rounded-xl px-3 py-2.5 text-left transition-colors active:scale-98 touch-manipulation"
+                  onClick={() => {
+                    onSelect(p.id);
+                    setQuery('');
+                  }}
+                >
+                  <span
+                    className={`text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0 ${
+                      POSITION_COLOURS[p.position] || 'bg-gray-500 text-white'
+                    }`}
+                  >
+                    {p.position}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-white text-sm truncate">{p.web_name}</p>
+                    <p className="text-white/40 text-xs truncate">
+                      {p.first_name} {p.second_name} · {p.team_name}
+                    </p>
+                  </div>
+                </button>
+              ))}
+            </div>
+          )}
+          {query.trim() && filtered.length === 0 && (
+            <p className="text-white/30 text-sm text-center py-3">No players found</p>
+          )}
+          <button
+            className="mt-3 w-full text-sm text-white/40 border border-white/10 rounded-xl py-2.5 hover:bg-white/5 transition-colors"
+            onClick={() => setShowCustom(true)}
+          >
+            + Add custom player (not in FPL)
+          </button>
+        </>
+      ) : (
+        <div className="space-y-3">
+          <input
+            type="text"
+            className="input-field"
+            placeholder="Player name"
+            value={customName}
+            onChange={(e) => setCustomName(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && submitCustom()}
+            autoFocus
+          />
+          <div className="flex gap-2">
+            <input
+              type="text"
+              className="input-field flex-1"
+              placeholder="Club (optional)"
+              value={customClub}
+              onChange={(e) => setCustomClub(e.target.value)}
+            />
+            <select
+              className="input-field w-28 flex-shrink-0"
+              value={customPos}
+              onChange={(e) => setCustomPos(e.target.value)}
             >
-              <span
-                className={`text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0 ${
-                  POSITION_COLOURS[p.position] || 'bg-gray-500 text-white'
-                }`}
-              >
-                {p.position}
-              </span>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-white text-sm truncate">{p.web_name}</p>
-                <p className="text-white/40 text-xs truncate">
-                  {p.first_name} {p.second_name} · {p.team_name}
-                </p>
-              </div>
+              <option value="GK">GK</option>
+              <option value="DEF">DEF</option>
+              <option value="MID">MID</option>
+              <option value="FWD">FWD</option>
+            </select>
+          </div>
+          <div className="flex gap-2">
+            <button
+              className="flex-1 bg-white/10 text-white/70 rounded-xl py-2.5 text-sm"
+              onClick={() => setShowCustom(false)}
+            >
+              Cancel
             </button>
-          ))}
+            <button
+              className={`flex-1 btn-green ${!customName.trim() ? 'opacity-50 pointer-events-none' : ''}`}
+              onClick={submitCustom}
+            >
+              Start Auction
+            </button>
+          </div>
         </div>
-      )}
-      {query.trim() && filtered.length === 0 && (
-        <p className="text-white/30 text-sm text-center py-3">No players found</p>
       )}
     </div>
   );
@@ -434,7 +502,11 @@ export default function AdminPage({ gameState, players, connected, emit }) {
           </section>
         ) : (
           <section className="card">
-            <PlayerSearch players={players} onSelect={(id) => emit('startAuction', id)} />
+            <PlayerSearch
+            players={players}
+            onSelect={(id) => emit('startAuction', id)}
+            onSelectCustom={(custom) => emit('startCustomAuction', custom)}
+          />
           </section>
         )}
 
