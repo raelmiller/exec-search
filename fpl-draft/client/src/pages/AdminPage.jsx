@@ -309,23 +309,30 @@ function AuctionControls({ auction, teams, emit }) {
 
       {/* Leading team selector */}
       <div>
-        <label className="text-white/50 text-xs uppercase tracking-widest block mb-1">
+        <label className="text-white/50 text-xs uppercase tracking-widest block mb-2">
           Leading Team
         </label>
-        <select
-          className="input-field"
-          value={leadingTeamId ?? ''}
-          onChange={(e) =>
-            emit('setLeadingTeam', e.target.value ? Number(e.target.value) : null)
-          }
-        >
-          <option value="">— Select team —</option>
-          {teams.map((t) => (
-            <option key={t.id} value={t.id}>
-              {t.name} (£{t.budget.toFixed(2)}m)
-            </option>
-          ))}
-        </select>
+        <div className="grid grid-cols-2 gap-2">
+          {teams.map((t) => {
+            const selected = t.id === leadingTeamId;
+            return (
+              <button
+                key={t.id}
+                className={`text-left px-3 py-2.5 rounded-xl border text-sm font-semibold transition-all active:scale-95 touch-manipulation ${
+                  selected
+                    ? 'bg-fpl-green text-fpl-purple border-fpl-green'
+                    : 'bg-white/5 text-white border-white/10 hover:bg-white/10'
+                }`}
+                onClick={() => emit('setLeadingTeam', selected ? null : t.id)}
+              >
+                <p className="truncate">{t.name}</p>
+                <p className={`text-xs font-normal ${selected ? 'text-fpl-purple/70' : 'text-white/40'}`}>
+                  £{t.budget.toFixed(2)}m
+                </p>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Confirm / Cancel */}
