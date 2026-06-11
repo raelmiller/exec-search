@@ -100,6 +100,7 @@ function broadcastState() {
     teams: gameState.teams,
     currentAuction: gameState.currentAuction,
     soldPlayers: gameState.soldPlayers,
+    clock: gameState.clock,
   });
 }
 
